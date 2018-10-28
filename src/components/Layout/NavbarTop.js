@@ -2,6 +2,11 @@ import React from 'react';
 
 import Aux from '../../hocs/Auxiliary';
 
+const datas = [
+    { id : 1, name : "sotheara"},
+    { id : 2, name : "monyta"}
+];
+
 const navbarTop = (props) => (
     <Aux>
         <div className="top-bar bg-gray">
