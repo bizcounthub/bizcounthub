@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Aux from '../../hocs/Auxiliary';
+import Aux from '../../hocs/Auxiliary/Auxiliary';
 
 const menu = (props) => (
     <Aux>

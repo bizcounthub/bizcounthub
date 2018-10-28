@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Aux from '../../hocs/Auxiliary';
+import Aux from '../../hocs/Auxiliary/Auxiliary';
 
 const datas = [
-    { id : 1, name : "sotheara"},
-    { id : 2, name : "monyta"}
+    { id: 1, name: "sotheara" },
+    { id: 2, name: "monyta" }
 ];
 
 const navbarTop = (props) => (

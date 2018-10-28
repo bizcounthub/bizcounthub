@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Aux from '../../hocs/Auxiliary';
+import Aux from '../../hocs/Auxiliary/Auxiliary';
 import Menu from '../Layout/Menu';
 import NavbarTop from '../Layout/NavbarTop';
 
