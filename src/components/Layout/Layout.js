@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Aux from '../../hocs/Auxiliary/Auxiliary';
 import Menu from '../Layout/Menu';
@@ -12,9 +13,9 @@ const layout = (props) => (
                 <div className="container">
                     <div className="row row-rl-0 row-tb-20 row-md-cell">
                         <div className="brand col-md-3 t-xs-center t-md-left valign-middle">
-                            <a href=".html" className="logo">
+                            <Link to="/" className="logo">
                                 <img src="assets/images/logo.png" alt="" width="250" />
-                            </a>
+                            </Link>
                         </div>
                         <div className="header-search col-md-9">
                             <div className="row row-tb-10 ">

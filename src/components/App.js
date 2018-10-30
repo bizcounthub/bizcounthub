@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, BrowserRouter } from 'react-router-dom';
 
 import Layout from './Layout/Layout';
 import Home from './Home/Home';
+import AboutUs from './AboutUs/AboutUs';
 
 class App extends Component {
 	render() {
 		return (
-			<Layout>
-				<Home />
-			</Layout>
+			<BrowserRouter >
+				<Layout>
+					<Route path="/" exact component={Home} />
+					<Route path="/about" component={AboutUs} />
+				</Layout>
+			</BrowserRouter >
 		);
 	}
 }

@@ -652,6 +652,9 @@
 .nav-menu > li.active > a {
   background-color: #2ed87b;
 }
+.nav-menu > li > a.active {
+  background-color: #2ed87b;
+}
 .nav-menu > li > ul a {
   color: #314555;
   background-color: #fff;

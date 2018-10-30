@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 import Aux from '../../hocs/Auxiliary/Auxiliary';
 
@@ -16,8 +17,8 @@ const menu = (props) => (
                     </div>
                     <div id="header-navbar" className="nav-collapse">
                         <ul className="nav-menu">
-                            <li className="active">
-                                <a href="index-3.html">Home</a>
+                            <li>
+                                <NavLink exact to="/">Home</NavLink>
                             </li>
                             <li className="dropdown-mega-menu">
                                 <a href="deals_grid.html">Deals</a>
@@ -246,7 +247,11 @@ const menu = (props) => (
                                     </li>
                                 </ul>
                             </li>
+                            <li>
+                                <NavLink exact to={{ pathname: "/about", hash: "#submit", search: "?quick-submit=true" }}>About</NavLink>
+                            </li>
                         </ul>
+
                     </div>
                 </nav>
             </div>
