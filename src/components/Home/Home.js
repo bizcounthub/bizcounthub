@@ -14,7 +14,7 @@ class Home extends Component {
   componentDidUpdate() {
     axios.get("https://jsonplaceholder.typicode.com/posts/1")
       .then(response => {
-        console.log(response);
+        //console.log(response);
       })
   }
 
@@ -28,7 +28,7 @@ class Home extends Component {
           }
         });
         this.setState({ posts: updatePosts });
-        console.log(response);
+        //console.log(response);
       });
   }
 
