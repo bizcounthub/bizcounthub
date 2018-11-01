@@ -4,7 +4,7 @@ import { Route, BrowserRouter } from 'react-router-dom';
 import Layout from './Layout/Layout';
 import Home from './Home/Home';
 import AboutUs from './AboutUs/AboutUs';
-
+import Register from './Auth/Register';
 
 import ApolloClient from 'apollo-boost';
 import gql from 'graphql-tag';
@@ -35,6 +35,7 @@ class App extends Component {
 				<Layout>
 					<Route path="/" exact component={Home} />
 					<Route path="/about" component={AboutUs} />
+					<Route path="/register" component={Register} />
 				</Layout>
 			</BrowserRouter >
 		);
