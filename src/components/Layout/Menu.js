@@ -1,10 +1,8 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-
-import Aux from '../../hocs/Auxiliary/Auxiliary';
+import { NavLink } from 'react-router-dom';
 
 const menu = (props) => (
-  <Aux>
+  <React.Fragment>
     <div className="header-menu bg-blue">
       <div className="container">
         <nav className="nav-bar">
@@ -256,7 +254,7 @@ const menu = (props) => (
         </nav>
       </div>
     </div>
-  </Aux>
+  </React.Fragment>
 );
 
 export default menu;

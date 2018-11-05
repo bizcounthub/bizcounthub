@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Aux from '../../hocs/Auxiliary/Auxiliary';
-import Menu from '../Layout/Menu';
-import NavbarTop from '../Layout/NavbarTop';
+import Menu from '../layout/Menu';
+import NavbarTop from '../layout/NavbarTop';
 
 const layout = (props) => (
-  <Aux>
+  <React.Fragment>
     <header id="mainHeader" className="main-header">
       <NavbarTop />
       <div className="header-header bg-white">
@@ -67,7 +66,7 @@ const layout = (props) => (
     <main>
       {props.children}
     </main>
-  </Aux>
+  </React.Fragment>
 );
 
 export default layout;

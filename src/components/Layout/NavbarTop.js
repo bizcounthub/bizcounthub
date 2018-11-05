@@ -1,14 +1,7 @@
 import React from 'react';
 
-import Aux from '../../hocs/Auxiliary/Auxiliary';
-
-const datas = [
-  { id: 1, name: "sotheara" },
-  { id: 2, name: "monyta" }
-];
-
 const navbarTop = (props) => (
-  <Aux>
+  <React.Fragment>
     <div className="top-bar bg-gray">
       <div className="container">
         <div className="row">
@@ -53,7 +46,7 @@ const navbarTop = (props) => (
         </div>
       </div>
     </div>
-  </Aux>
+  </React.Fragment>
 );
 
 export default navbarTop;

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter } from 'react-router-dom';
 
-import Layout from './Layout/Layout';
-import Home from './Home/Home';
-import AboutUs from './AboutUs/AboutUs';
-import Register from './Auth/Register';
+import Layout from '../components/layout/Layout';
+import Home from '../components/home/Home';
+import AboutUs from '../components/company/About';
+import Register from '../components/authenticate/Register';
 
 import ApolloClient from 'apollo-boost';
 import gql from 'graphql-tag';
