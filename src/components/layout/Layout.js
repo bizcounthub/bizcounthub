@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Menu from '../layout/Menu';
 import NavbarTop from '../layout/NavbarTop';
+import Footer from '../layout/Footer';
 
 const layout = (props) => (
   <React.Fragment>
@@ -63,9 +64,10 @@ const layout = (props) => (
       </div>
       <Menu />
     </header>
-    <main>
+    <main id="mainContent" className="main-content">
       {props.children}
     </main>
+    <Footer />
   </React.Fragment>
 );
 

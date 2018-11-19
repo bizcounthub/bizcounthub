@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Store extends Component {
+class StoreView extends Component {
   render() {
     return (
       <div>Store</div>
@@ -8,4 +8,4 @@ class Store extends Component {
   }
 }
 
-export default Store;
+export default StoreView;
