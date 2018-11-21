@@ -40,7 +40,9 @@ class HomeView extends Component {
         category_id, 
         description,
         language_id,
-        create_at
+        create_at,
+        image,
+        fa_icon
       }
     }`;
 
@@ -64,17 +66,111 @@ class HomeView extends Component {
                           }
 
                           const categories = data.sttm_category_v
-                          console.log(data);
                           return (
                             <React.Fragment>
-                              {categories.map(s =>
-                                <li><Link to={{ pathname: "/" }}><i className="fa fa-cutlery"></i>{s.description}</Link></li>)}
+                              {
+                                categories.map(s =>
+                                  <li key={s.category_id} ><Link to={{ pathname: "/" }}><i className={s.fa_icon}></i>{s.description}</Link></li>
+                                )
+                              }
+                              <li className="all-cat">
+                                <Link className="font-14" to={{ pathname: "/" }}>All Categories</Link>
+                              </li>
                             </React.Fragment>
                           )
                         }}
                       </Query>
                     </ul>
                   </aside>
+                </div>
+                <div className="col-xs-12 col-md-8 col-lg-9">
+                  <div className="header-deals-slider owl-slider"
+                    data-loop="true"
+                    data-autoplay="true"
+                    data-autoplay-timeout="10000"
+                    data-smart-speed="1000"
+                    data-nav-speed="false"
+                    data-nav="true"
+                    data-xxs-items="1"
+                    data-xxs-nav="true"
+                    data-xs-items="1"
+                    data-xs-nav="true"
+                    data-sm-items="1"
+                    data-sm-nav="true"
+                    data-md-items="1"
+                    data-md-nav="true"
+                    data-lg-items="1"
+                    data-lg-nav="true">
+                    <div className="deal-single panel item">
+                      <figure className="deal-thumbnail embed-responsive embed-responsive-16by9" data-bg-img="assets/images/deals/deal_01.jpg">
+                        <div className="label-discount top-10 right-10">-50%</div>
+                        <ul className="deal-actions top-10 left-10">
+                          <li className="like-deal">
+                            <span>
+                              <i className="fa fa-heart"></i>
+                            </span>
+                          </li>
+                          <li className="share-btn">
+                            <div className="share-tooltip fade">
+                              <Link to={{ pathname: "/" }}><i className="fa fa-facebook"></i></Link>
+                              <Link to={{ pathname: "/" }}><i className="fa fa-twitter"></i></Link>
+                              <Link to={{ pathname: "/" }}><i className="fa fa-google-plus"></i></Link>
+                              <Link to={{ pathname: "/" }}><i className="fa fa-pinterest"></i></Link>
+                            </div>
+                            <span><i className="fa fa-share-alt"></i></span>
+                          </li>
+                          <li>
+                            <span>
+                              <i className="fa fa-camera"></i>
+                            </span>
+                          </li>
+                        </ul>
+                        <div className="deal-about p-20 pos-a bottom-0 left-0">
+                          <div className="rating mb-10">
+                            <span className="rating-stars" data-rating="5">
+                              <i className="fa fa-star-o star-active"></i>
+                              <i className="fa fa-star-o"></i>
+                              <i className="fa fa-star-o"></i>
+                              <i className="fa fa-star-o"></i>
+                              <i className="fa fa-star-o"></i>
+                            </span>
+                            <span className="rating-reviews color-light">
+                              ( <span className="rating-count">241</span> Reviews )
+                            </span>
+                          </div>
+                          <h3 className="deal-title mb-10 ">
+                            <a href="deal_single.html" className="color-light color-h-lighter">The Crash Bad Instant Folding Twin Bed</a>
+                          </h3>
+                        </div>
+                      </figure>
+                    </div>
+                    <div className="deal-single panel item">
+                      <figure className="deal-thumbnail embed-responsive embed-responsive-16by9" data-bg-img="assets/images/deals/deal_02.jpg">
+                        <div className="label-discount top-10 right-10">-30%</div>
+                        <ul className="deal-actions top-10 left-10">
+                          <li className="like-deal">
+                            <span>
+                              <i className="fa fa-heart"></i>
+                            </span>
+                          </li>
+                          <li className="share-btn">
+                            <div className="share-tooltip fade">
+                              <Link to={{ pathname: "/" }}><i className="fa fa-facebook"></i></Link>
+                              <Link to={{ pathname: "/" }}><i className="fa fa-twitter"></i></Link>
+                              <Link to={{ pathname: "/" }}><i className="fa fa-google-plus"></i></Link>
+                              <Link to={{ pathname: "/" }}><i className="fa fa-pinterest"></i></Link>
+                            </div>
+                            <span><i className="fa fa-share-alt"></i></span>
+                          </li>
+                          <li>
+                            <span>
+                              <i className="fa fa-camera"></i>
+                            </span>
+                          </li>
+                        </ul>
+                      </figure>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
