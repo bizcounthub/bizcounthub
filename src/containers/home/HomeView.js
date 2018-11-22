@@ -13,9 +13,12 @@ class HomeView extends Component {
   }
 
   componentWillMount() {
-    console.log("component willMount;");
+
   }
 
+  shouldComponentUpdate() {
+    console.log("shouldComponentUpdate");
+  }
   componentDidUpdate() {
     // axios.get("https://jsonplaceholder.typicode.com/posts/1")
     //   .then(response => {
@@ -40,7 +43,7 @@ class HomeView extends Component {
   render() {
     const FETCH_CATEGORY = gql`
     query fetch_category {
-      sttm_category_v {
+      dim_category_v {
         category_id, 
         description,
         language_id,
@@ -61,7 +64,10 @@ class HomeView extends Component {
                     <ul className="nav-coupon-category panel">
                       <Query query={FETCH_CATEGORY}>
                         {({ loading, error, data }) => {
-                          if (loading) return <div>Fetching</div>
+                          if (loading) {
+                            console.log("fetching...")
+                            return <div>Fetching</div>
+                          }
                           if (error) {
                             console.log(error)
                             return (
@@ -69,7 +75,7 @@ class HomeView extends Component {
                             )
                           }
 
-                          const categories = data.sttm_category_v
+                          const categories = data.dim_category_v
                           return (
                             <React.Fragment>
                               {
