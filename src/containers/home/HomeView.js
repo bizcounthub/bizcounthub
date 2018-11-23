@@ -56,7 +56,7 @@ class HomeView extends Component {
   render() {
     const FETCH_CATEGORY = gql`
     query fetch_category {
-      dim_category_v {
+      dim_category_v (order_by: {seq_no : asc}) {
         category_id, 
         description,
         language_id,

@@ -4,10 +4,9 @@ import Countdown from 'react-countdown-now';
 const countDown = (props) => {
   // Renderer callback with condition
   const renderer = ({ hours, minutes, seconds, completed }) => {
-    console.log(props.date);
     if (completed) {
       // Render a completed state
-      return <div>THIS OFFER HAS EXPIRED</div>;
+      return <span className="t-uppercase" data-countdown={props.date}>THIS OFFER HAS EXPIRED</span>;
     } else {
       // Render a countdown
       return (
