@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { url } from 'inspector';
+import CountDown from '../../components/countdown/CountDown';
+import Countdown from 'react-countdown-now';
 
 class LatestDealView extends Component {
   render() {
@@ -15,7 +16,7 @@ class LatestDealView extends Component {
           <div className="row row-masnory row-tb-20">
             <div className="col-sm-6 col-lg-4">
               <div className="deal-single panel">
-                <figure className="deal-thumbnail embed-responsive embed-responsive-16by9" data-bg-img="assets/images/deals/deal_02.jpg">
+                <figure className="deal-thumbnail embed-responsive embed-responsive-16by9" data-bg-img="" style={{ backgroundImage: "url('https://www.longines.com/uploads/news/thumb/news-longines-creates-a-special-limited-record-watch-to-celebrate-its-140-years-of-presence-in-russia-800x500.jpg')" }} >
                   <div className="label-discount left-20 top-15">-50%</div>
                   <ul className="deal-actions top-15 right-20">
                     <li className="like-deal">
@@ -41,7 +42,7 @@ class LatestDealView extends Component {
                   <div className="time-left bottom-15 right-20 font-md-14">
                     <span>
                       <i className="ico fa fa-clock-o mr-10"></i>
-                      <span className="t-uppercase" data-countdown="2019/09/01 01:30:00"></span>
+                      <CountDown date="2018/09/01 01:30:00"></CountDown>
                     </span>
                   </div>
                   <div className="deal-store-logo">
@@ -60,7 +61,7 @@ class LatestDealView extends Component {
                       </span>
                       <span className="rating-reviews">
                         ( <span className="rating-count">241</span> rates )
-                                                </span>
+                      </span>
                     </div>
                     <h3 className="deal-title mb-10">
                       <a href="deal_single.html">The Crash Bad Instant Folding Twin Bed</a>
@@ -79,7 +80,7 @@ class LatestDealView extends Component {
             </div>
             <div className="col-sm-6 col-lg-4">
               <div className="deal-single panel">
-                <figure className="deal-thumbnail embed-responsive embed-responsive-16by9" data-bg-img="assets/images/deals/deal_02.jpg">
+                <figure className="deal-thumbnail embed-responsive embed-responsive-16by9" data-bg-img="" style={{ backgroundImage: "url('http://blogs-images.forbes.com/gordonkelly/files/2017/04/iDrop-News-Exclusive-iPhone-8-Image-6.jpg')" }}>
                   <div className="label-discount left-20 top-15">-30%</div>
                   <ul className="deal-actions top-15 right-20">
                     <li className="like-deal">
@@ -169,7 +170,7 @@ class LatestDealView extends Component {
                   <div className="time-left bottom-15 right-20 font-md-14">
                     <span>
                       <i className="ico fa fa-clock-o mr-10"></i>
-                      <span className="t-uppercase" data-countdown="2020/10/10 12:25:10"></span>
+                      <Countdown date="2020/10/10 12:25:10"></Countdown>
                     </span>
                   </div>
                   <div className="deal-store-logo">
@@ -252,7 +253,7 @@ class LatestDealView extends Component {
                       </span>
                       <span className="rating-reviews">
                         ( <span className="rating-count">100</span> rates )
-                                                </span>
+                      </span>
                     </div>
                     <h3 className="deal-title mb-10">
                       <a href="deal_single.html">Timberland Men's Thorton Waterproof Boots</a>
@@ -297,7 +298,7 @@ class LatestDealView extends Component {
                   <div className="time-left bottom-15 right-20 font-md-14">
                     <span>
                       <i className="ico fa fa-clock-o mr-10"></i>
-                      <span className="t-uppercase" data-countdown="2021/12/03 03:15:00"></span>
+                      <CountDown date="2021/12/03 03:15:00"></CountDown>
                     </span>
                   </div>
                   <div className="deal-store-logo">
@@ -380,7 +381,7 @@ class LatestDealView extends Component {
                       </span>
                       <span className="rating-reviews">
                         ( <span className="rating-count">29</span> rates )
-                                                </span>
+                      </span>
                     </div>
                     <h3 className="deal-title mb-10">
                       <a href="deal_single.html">Buying a TV Is Easy When You Know These Terms</a>

@@ -17,7 +17,7 @@ class HomeView extends Component {
   }
 
   componentWillMount() {
-
+    console.log("willMount");
   }
 
   shouldComponentUpdate() {
@@ -28,6 +28,7 @@ class HomeView extends Component {
     //   .then(response => {
     //     //console.log(response);
     //   })
+    console.log("didUpdate");
   }
 
   componentDidMount() {
@@ -42,10 +43,13 @@ class HomeView extends Component {
     //     this.setState({ posts: updatePosts });
     //     //console.log(response);
     //   });
+    console.log("didMount");
     const owlSlider = document.getElementsByClassName('owl-slider');
     for (var item of owlSlider) {
 
     }
+
+    const countDown = null;
     //console.log(owlSlider[0].dataset.autoplay);
   }
 
@@ -81,7 +85,7 @@ class HomeView extends Component {
             <React.Fragment>
               {
                 categories.map(s =>
-                  <li key={s.category_id} ><Link to={{ pathname: "/" }}><i className={s.fa_icon}></i>{s.description}</Link></li>
+                  <li key={s.category_id} ><Link to={{ pathname: "/" }}><i className={s.fa_icon}></i>{s.description}<span>40</span></Link></li>
                 )
               }
               <li className="all-cat">

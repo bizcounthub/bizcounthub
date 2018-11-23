@@ -380,6 +380,7 @@
                     if (e.offset.weeks > 0) {
                         format = '%w Week%!w ' + format;
                     }
+                    //console.log(format);
                     $(this).html(e.strftime(format));
                 });
         }).on('finish.countdown', function (e) {
