@@ -2,14 +2,24 @@ import React, { Component } from 'react';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag'
 import { Link } from 'react-router-dom';
+import OwlCarousel from 'react-owl-carousel';
 
 class PopularStoreView extends Component {
+
+  componentWillMount() {
+
+  }
+  componentDidMount() {
+
+  }
+
   render() {
     const FETCH_POPULAR_STORE = gql`
     query fetch_popular_store {
-      dim_store_v {
+      dim_store_v (limit : 10, order_by: {name: asc}) {
         id,
-        name
+        name,
+        logo,
       }
     }
     `;
@@ -25,20 +35,52 @@ class PopularStoreView extends Component {
 
           return (
             <React.Fragment>
-              {
-                stores.map((s, index) =>
-                  <div key={index} className="store-item t-center">
-                    <a key={index} href="store_single_01.html" className="panel is-block">
-                      <div key={index} className="embed-responsive embed-responsive-4by3">
-                        <div key={index} className="store-logo">
-                          <img key={index} src="assets/images/brands/brand_01.jpg" alt=""></img>
+              <OwlCarousel
+                loop
+                autoplay
+                smartSpeed={1000}
+                autoplayTimeout={10000}
+                margin={20}
+                items={2}
+                responsiveClass
+                responsive={{
+                  0: {
+                    items: 2,
+                    nav: false
+                  },
+                  480: {
+                    items: 2,
+                    nav: false
+                  },
+                  768: {
+                    items: 3,
+                    nav: false
+                  },
+                  992: {
+                    items: 5,
+                    nav: false
+                  },
+                  1199: {
+                    items: 6,
+                    nav: false
+                  }
+                }}
+              >
+                {
+                  stores.map((s, index) =>
+                    <div key={index} className="store-item t-center">
+                      <a href="store_single_01.html" className="panel is-block">
+                        <div className="embed-responsive embed-responsive-4by3">
+                          <div className="store-logo">
+                            <img src={s.logo} alt=""></img>
+                          </div>
                         </div>
-                      </div>
-                      <h6 key={index} className="store-name ptb-10">Amazon</h6>
-                    </a>
-                  </div>
-                )
-              }
+                        <h6 className="store-name ptb-10">{s.name}</h6>
+                      </a>
+                    </div>
+                  )
+                }
+              </OwlCarousel>
             </React.Fragment>
           )
         }}
@@ -52,7 +94,7 @@ class PopularStoreView extends Component {
             <h3 className="section-title font-18">Popular Stores</h3>
             <a href="stores_01.html" className="btn btn-o btn-xs pos-a right-10 pos-tb-center">All Stores</a>
           </header>
-          <div className="popular-stores-slider owl-slider" data-loop="true" data-autoplay="true" data-smart-speed="1000" data-autoplay-timeout="10000" data-margin="20" data-items="2" data-xxs-items="2" data-xs-items="2" data-sm-items="3" data-md-items="5" data-lg-items="6">
+          <div className="popular-stores-slider">
             {storeItems}
           </div>
         </section>
