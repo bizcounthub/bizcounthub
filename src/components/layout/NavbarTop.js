@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const navbarTop = (props) => (
   <React.Fragment>
@@ -37,9 +38,11 @@ const navbarTop = (props) => (
                   </li>
                 </ul>
               </li>
-              <li><a href="signin.html"><i className="fa fa-lock"></i>Sign In</a>
+              <li>
+                <Link to="/signin"><i className="fa fa-lock"></i>Sign In</Link>
               </li>
-              <li><a href="signup.html"><i className="fa fa-user"></i>Sign Up</a>
+              <li>
+                <Link to="/signup"><i className="fa fa-user"></i>Sign Up</Link>
               </li>
             </ul>
           </div>

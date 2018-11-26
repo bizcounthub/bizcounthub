@@ -106,17 +106,7 @@ const menu = (props) => (
                 </ul>
               </li>
               <li>
-                <a href="stores_01.html">Stores</a>
-                <ul>
-                  <li><a href="stores_01.html">Stores Search</a>
-                  </li>
-                  <li><a href="stores_02.html">Stores Categories</a>
-                  </li>
-                  <li><a href="store_single_01.html">Store Single 1</a>
-                  </li>
-                  <li><a href="store_single_02.html">Store Single 2</a>
-                  </li>
-                </ul>
+                <NavLink exact to="/store">Store</NavLink>
               </li>
               <li>
                 <a href="contact_us_01.html">Contact Us</a>
