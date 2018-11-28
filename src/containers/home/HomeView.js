@@ -10,6 +10,7 @@ import LatestDealView from './LatestDealView';
 import PopularStoreView from './PopularStoreView';
 import LatestNewsView from './LatestNewsView';
 import LatestCuponView from './LatestCuponView';
+import LatestProductView from './LatestProductView';
 
 class HomeView extends Component {
   state = {
@@ -320,6 +321,7 @@ class HomeView extends Component {
                 </div>
               </div>
             </div>
+            <LatestProductView />
             <LatestDealView />
             <LatestCuponView />
             <PopularStoreView />

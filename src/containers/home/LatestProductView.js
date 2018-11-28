@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import CountDown from '../../components/countdown/CountDown';
 
-class LatestDealView extends Component {
+class LatestProductView extends Component {
   render() {
     return (
       <React.Fragment>
         <section className="section latest-deals-area ptb-30">
           <header className="panel ptb-15 prl-20 pos-r mb-30">
-            <h3 className="section-title font-18">Latest Deals</h3>
+            <h3 className="section-title font-18">Latest Products</h3>
             <Link to={{ pathname: "/" }} className="btn btn-o btn-xs pos-a right-10 pos-tb-center">View All</Link>
           </header>
 
@@ -16,6 +16,7 @@ class LatestDealView extends Component {
             <div className="col-sm-6 col-lg-4">
               <div className="deal-single panel">
                 <figure className="deal-thumbnail embed-responsive embed-responsive-16by9" data-bg-img="" style={{ backgroundImage: "url('https://www.longines.com/uploads/news/thumb/news-longines-creates-a-special-limited-record-watch-to-celebrate-its-140-years-of-presence-in-russia-800x500.jpg')" }} >
+
                   <div className="label-discount left-20 top-15">-50%</div>
                   <ul className="deal-actions top-15 right-20">
                     <li className="like-deal">
@@ -404,4 +405,4 @@ class LatestDealView extends Component {
   }
 }
 
-export default LatestDealView;
+export default LatestProductView;

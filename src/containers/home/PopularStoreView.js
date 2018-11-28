@@ -17,7 +17,7 @@ class PopularStoreView extends Component {
     const FETCH_POPULAR_STORE = gql`
     query fetch_popular_store {
       dim_store_v (limit : 10, order_by: {name: asc}) {
-        id,
+        store_id,
         name,
         logo,
       }
