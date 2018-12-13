@@ -13,10 +13,6 @@ import LatestCuponView from './LatestCuponView';
 import LatestProductView from './LatestProductView';
 
 class HomeView extends Component {
-  state = {
-    posts: []
-  }
-
   componentWillMount() {
     console.log("willMount");
   }
@@ -59,10 +55,7 @@ class HomeView extends Component {
     query fetch_category {
       dim_category_v (order_by: {seq_no : asc}, limit: 9) {
         category_id, 
-        description,
-        language_id,
-        create_at,
-        image,
+        name,
         fa_icon
       }
     }`;
@@ -81,12 +74,11 @@ class HomeView extends Component {
             )
           }
 
-          const categories = data.dim_category_v
           return (
             <React.Fragment>
               {
-                categories.map(s =>
-                  <li key={s.category_id} ><Link to={{ pathname: "/" }}><i className={s.fa_icon}></i>{s.description}<span>40</span></Link></li>
+                data.dim_category_v.map(s =>
+                  <li key={s.category_id} ><Link to={{ pathname: "/" }}><i className={s.fa_icon}></i>{s.name}<span>40</span></Link></li>
                 )
               }
               <li className="all-cat">
@@ -182,9 +174,10 @@ class HomeView extends Component {
                             </span>
                             </div>
                             <h3 className="deal-title mb-10 ">
-                              <a href="deal_single.html" className="color-light color-h-lighter">The Crash Bad Instant Folding Twin Bed</a>
+                              <Link to={"deal"} className="color-light color-h-lighter">The Crash Bad Instant Folding Twin Bed</Link>
                             </h3>
                           </div>
+
                         </figure>
                       </div>
                       <div className="deal-single panel item">
@@ -232,7 +225,7 @@ class HomeView extends Component {
                       </div>
                       <div className="deal-single panel item">
                         <figure className="deal-thumbnail embed-responsive embed-responsive-16by9" data-bg-img="assets/images/deals/deal_03.jpg">
-                          <div className="label-discount top-10 right-10">-30%</div>
+                          <div className="label-discount top-10 right-10">-40%</div>
                           <ul className="deal-actions top-10 left-10">
                             <li className="like-deal">
                               <span>

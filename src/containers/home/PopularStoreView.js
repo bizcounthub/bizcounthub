@@ -19,7 +19,7 @@ class PopularStoreView extends Component {
       dim_store_v (limit : 10, order_by: {name: asc}) {
         store_id,
         name,
-        logo,
+        img_logo,
       }
     }
     `;
@@ -72,7 +72,7 @@ class PopularStoreView extends Component {
                       <a href="store_single_01.html" className="panel is-block">
                         <div className="embed-responsive embed-responsive-4by3">
                           <div className="store-logo">
-                            <img src={s.logo} alt=""></img>
+                            <img src={s.img_logo} alt=""></img>
                           </div>
                         </div>
                         <h6 className="store-name ptb-10">{s.name}</h6>

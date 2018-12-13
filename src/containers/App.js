@@ -7,6 +7,7 @@ import AboutView from './company/AboutView';
 import SignupView from './authenticate/SingupView';
 import SigninView from './authenticate/SigninView';
 import StoreView from './store/StoreView';
+import SingleDealView from './deal/SingleDealView';
 
 class App extends Component {
 	render() {
@@ -18,6 +19,7 @@ class App extends Component {
 					<Route path="/signup" component={SignupView} />
 					<Route path="/store" component={StoreView} />
 					<Route path="/signin" component={SigninView} />
+					<Route path="/deal" component={SingleDealView} />
 				</Layout>
 			</BrowserRouter >
 		);
