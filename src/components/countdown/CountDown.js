@@ -1,5 +1,6 @@
 import React from 'react';
 import Countdown from 'react-countdown-now';
+import Moment from 'react-moment';
 
 const countDown = (props) => {
   // Renderer callback with condition
@@ -12,7 +13,7 @@ const countDown = (props) => {
       console.log("total:", total);
 
       return (
-        <span className="t-uppercase" data-countdown={props.date}>{hours}:{minutes}:{seconds}</span>
+        <span className="t-uppercase" data-countdown={props.date}><Moment date={props.date}></Moment> {hours}:{minutes}:{seconds}</span>
       )
     }
   };

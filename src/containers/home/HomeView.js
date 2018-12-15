@@ -137,7 +137,8 @@ class HomeView extends Component {
                         }
                       }}>
                       <div className="deal-single panel item">
-                        <figure className="deal-thumbnail embed-responsive embed-responsive-16by9" data-bg-img="https://cdn.bizcounthub.com/products/product_02.jpg">
+                        <figure className="deal-thumbnail embed-responsive embed-responsive-16by9">
+                          <img alt="" src="https://cdn.bizcounthub.com/deals/deal_01.jpg"></img>
                           <div className="label-discount top-10 right-10">-50%</div>
                           <ul className="deal-actions top-10 left-10">
                             <li className="like-deal">
@@ -181,7 +182,8 @@ class HomeView extends Component {
                         </figure>
                       </div>
                       <div className="deal-single panel item">
-                        <figure className="deal-thumbnail embed-responsive embed-responsive-16by9" data-bg-img="assets/images/deals/deal_02.jpg">
+                        <figure className="deal-thumbnail embed-responsive embed-responsive-16by9">
+                          <img alt="" src="https://cdn.bizcounthub.com/deals/deal_02.jpg"></img>
                           <div className="label-discount top-10 right-10">-30%</div>
                           <ul className="deal-actions top-10 left-10">
                             <li className="like-deal">
@@ -224,7 +226,8 @@ class HomeView extends Component {
                         </figure>
                       </div>
                       <div className="deal-single panel item">
-                        <figure className="deal-thumbnail embed-responsive embed-responsive-16by9" data-bg-img="assets/images/deals/deal_03.jpg">
+                        <figure className="deal-thumbnail embed-responsive embed-responsive-16by9">
+                          <img alt="" src="https://cdn.bizcounthub.com/deals/deal_03.jpg"></img>
                           <div className="label-discount top-10 right-10">-40%</div>
                           <ul className="deal-actions top-10 left-10">
                             <li className="like-deal">

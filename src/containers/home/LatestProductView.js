@@ -48,10 +48,11 @@ class LatestProductView extends Component {
                 data.product_discount_v.map(x =>
                   <div key={x.id} className="col-sm-6 col-lg-4">
                     <div className="deal-single panel">
-                      <figure className="deal-thumbnail embed-responsive embed-responsive-16by9" data-bg-img="" style={{ backgroundImage: "url('https://www.longines.com/uploads/news/thumb/news-longines-creates-a-special-limited-record-watch-to-celebrate-its-140-years-of-presence-in-russia-800x500.jpg')" }} >
+                      <figure className="deal-thumbnail embed-responsive embed-responsive-16by9">
+                        <img alt="" src={x.img}></img>
                         <div className="label-discount left-20 top-15">{x.discount_percentage}</div>
-                        <ul className="deal-actions top-15 right-20">
-                          <li className="like-deal">
+                        {/* <ul className="deal-actions top-15 right-20"> */}
+                        {/* <li className="like-deal">
                             <span>
                               <i className="fa fa-heart"></i>
                             </span>
@@ -64,13 +65,13 @@ class LatestProductView extends Component {
                               <Link to={{ pathname: "/" }}><i className="fa fa-pinterest"></i></Link>
                             </div>
                             <span><i className="fa fa-share-alt"></i></span>
-                          </li>
-                          <li>
+                          </li> */}
+                        {/* <li>
                             <span>
                               <i className="fa fa-camera"></i>
                             </span>
-                          </li>
-                        </ul>
+                          </li> */}
+                        {/* </ul> */}
                         <div className="time-left bottom-15 right-20 font-md-14">
                           <span>
                             <i className="ico fa fa-clock-o mr-10"></i>
@@ -83,18 +84,6 @@ class LatestProductView extends Component {
                       </figure>
                       <div className="bg-white pt-20 pl-20 pr-15">
                         <div className="pr-md-10">
-                          <div className="rating mb-10">
-                            <span className="rating-stars rate-allow" data-rating="5">
-                              <i className="fa fa-star-o"></i>
-                              <i className="fa fa-star-o"></i>
-                              <i className="fa fa-star-o"></i>
-                              <i className="fa fa-star-o"></i>
-                              <i className="fa fa-star-o"></i>
-                            </span>
-                            <span className="rating-reviews">
-                              ( <span className="rating-count">241</span> rates )
-                      </span>
-                          </div>
                           <h3 className="deal-title mb-10">
                             <Link to={{ pathname: "/deal" }}>{x.product_name}</Link>
                           </h3>
@@ -104,6 +93,18 @@ class LatestProductView extends Component {
                           </ul>
                           <p className="text-muted mb-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam numquam nostrum.</p>
                         </div>
+                        {/* <div className="rating mb-10">
+                          <span className="rating-stars rate-allow" data-rating="5">
+                            <i className="fa fa-star-o"></i>
+                            <i className="fa fa-star-o"></i>
+                            <i className="fa fa-star-o"></i>
+                            <i className="fa fa-star-o"></i>
+                            <i className="fa fa-star-o"></i>
+                          </span>
+                          <span className="rating-reviews">
+                            ( <span className="rating-count">241</span> rates )
+                            </span>
+                        </div> */}
                         <div className="deal-price pos-r mb-15">
                           <h3 className="price ptb-5 text-right"><span className="price-sale">$300.00</span>$150.00</h3>
                         </div>
