@@ -19,44 +19,44 @@ class SingleDealView extends Component {
                         <div id="product_slider" className="flexslider">
                           <ul className="slides">
                             <li>
-                              <img alt="" src="assets/images/products/product_01.jpg" />
+                              <img alt="" src="https://s3.amazonaws.com/cdn.bizcounthub.com/products/product_01.jpg" />
                             </li>
                             <li>
-                              <img alt="" src="assets/images/products/product_02.jpg" />
+                              <img alt="" src="https://cdn.bizcounthub.com/products/product_02.jpg" />
                             </li>
                             <li>
-                              <img alt="" src="assets/images/products/product_03.jpg" />
+                              <img alt="" src="https://cdn.bizcounthub.com/products/product_03.jpg" />
                             </li>
                             <li>
-                              <img alt="" src="assets/images/products/product_04.jpg" />
+                              <img alt="" src="https://cdn.bizcounthub.com/products/product_04.jpg" />
                             </li>
                             <li>
-                              <img alt="" src="assets/images/products/product_05.jpg" />
+                              <img alt="" src="https://cdn.bizcounthub.com/products/product_05.jpg" />
                             </li>
                             <li>
-                              <img alt="" src="assets/images/products/product_06.jpg" />
+                              <img alt="" src="https://cdn.bizcounthub.com/products/product_06.jpg" />
                             </li>
                           </ul>
                         </div>
                         <div id="product_slider_nav" className="flexslider flexslider-nav">
                           <ul className="slides">
                             <li>
-                              <img alt="" src="assets/images/products/thumb_01.jpg" />
+                              <img alt="" src="https://cdn.bizcounthub.com/products/thumb_01.jpg" />
                             </li>
                             <li>
-                              <img alt="" src="assets/images/products/thumb_02.jpg" />
+                              <img alt="" src="https://cdn.bizcounthub.com/products/thumb_02.jpg" />
                             </li>
                             <li>
-                              <img alt="" src="assets/images/products/thumb_03.jpg" />
+                              <img alt="" src="https://cdn.bizcounthub.com/products/thumb_03.jpg" />
                             </li>
                             <li>
-                              <img alt="" src="assets/images/products/thumb_04.jpg" />
+                              <img alt="" src="https://cdn.bizcounthub.com/products/thumb_04.jpg" />
                             </li>
                             <li>
-                              <img alt="" src="assets/images/products/thumb_05.jpg" />
+                              <img alt="" src="https://cdn.bizcounthub.com/products/thumb_05.jpg" />
                             </li>
                             <li>
-                              <img alt="" src="assets/images/products/thumb_06.jpg" />
+                              <img alt="" src="https://cdn.bizcounthub.com/products/thumb_06.jpg" />
                             </li>
                           </ul>
                         </div>

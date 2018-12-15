@@ -316,7 +316,7 @@
             itemWidth: 150,
             asNavFor: '#product_slider'
         });
-
+        // alert('jol product slider');
         $('#product_slider').flexslider({
             animation: "slide",
             controlNav: false,
