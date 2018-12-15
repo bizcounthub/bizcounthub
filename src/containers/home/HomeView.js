@@ -42,12 +42,16 @@ class HomeView extends Component {
     //   });
     console.log("didMount");
     const owlSlider = document.getElementsByClassName('owl-slider');
-    for (var item of owlSlider) {
+    // for (var item of owlSlider) {
 
-    }
+    // }
 
     const countDown = null;
     //console.log(owlSlider[0].dataset.autoplay);
+  }
+
+  productSliderHandler() {
+
   }
 
   render() {

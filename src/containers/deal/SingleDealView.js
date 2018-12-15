@@ -2,7 +2,29 @@ import React, { Component } from 'react';
 
 class SingleDealView extends Component {
   componentWillMount() {
+  }
 
+  componentDidMount() {
+    this.productSliderHandler();
+  }
+
+  productSliderHandler() {
+    window.$('#product_slider_nav').flexslider({
+      animation: "slide",
+      controlNav: false,
+      animationLoop: false,
+      slideshow: false,
+      itemWidth: 150,
+      asNavFor: '#product_slider'
+    });
+
+    window.$('#product_slider').flexslider({
+      animation: "slide",
+      controlNav: false,
+      animationLoop: false,
+      slideshow: false,
+      sync: "#product_slider_nav"
+    });
   }
 
   render() {

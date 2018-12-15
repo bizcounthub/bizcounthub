@@ -10,7 +10,7 @@ const countDown = (props) => {
       return <span className="t-uppercase" data-countdown={props.date}>THIS OFFER HAS EXPIRED</span>;
     } else {
       // Render a countdown
-      console.log("total:", total);
+      //console.log("total:", total);
 
       return (
         <span className="t-uppercase" data-countdown={props.date}><Moment date={props.date}></Moment> {hours}:{minutes}:{seconds}</span>
