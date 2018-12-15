@@ -137,7 +137,7 @@ class HomeView extends Component {
                         }
                       }}>
                       <div className="deal-single panel item">
-                        <figure className="deal-thumbnail embed-responsive embed-responsive-16by9" data-bg-img="assets/images/deals/deal_01.jpg">
+                        <figure className="deal-thumbnail embed-responsive embed-responsive-16by9" data-bg-img="https://cdn.bizcounthub.com/products/product_02.jpg">
                           <div className="label-discount top-10 right-10">-50%</div>
                           <ul className="deal-actions top-10 left-10">
                             <li className="like-deal">

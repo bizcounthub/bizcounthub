@@ -46,7 +46,7 @@ class LatestProductView extends Component {
             <React.Fragment>
               {
                 data.product_discount_v.map(x =>
-                  <div className="col-sm-6 col-lg-4">
+                  <div key={x.id} className="col-sm-6 col-lg-4">
                     <div className="deal-single panel">
                       <figure className="deal-thumbnail embed-responsive embed-responsive-16by9" data-bg-img="" style={{ backgroundImage: "url('https://www.longines.com/uploads/news/thumb/news-longines-creates-a-special-limited-record-watch-to-celebrate-its-140-years-of-presence-in-russia-800x500.jpg')" }} >
                         <div className="label-discount left-20 top-15">{x.discount_percentage}</div>
@@ -96,7 +96,7 @@ class LatestProductView extends Component {
                       </span>
                           </div>
                           <h3 className="deal-title mb-10">
-                            <Link to={{ pathname: "/deal/" + x.id }}>{x.product_name}</Link>
+                            <Link to={{ pathname: "/deal" }}>{x.product_name}</Link>
                           </h3>
                           <ul className="deal-meta list-inline mb-10 color-mid">
                             <li><i className="ico fa fa-map-marker mr-10"></i>United State</li>
