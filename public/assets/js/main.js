@@ -308,6 +308,7 @@
      Flexslider
     -------------------------------------*/
     var product_slider = function () {
+        alert('jol slider pro');
         $('#product_slider_nav').flexslider({
             animation: "slide",
             controlNav: false,
