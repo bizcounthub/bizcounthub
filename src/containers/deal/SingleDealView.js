@@ -19,7 +19,7 @@ class SingleDealView extends Component {
                         <div id="product_slider" className="flexslider">
                           <ul className="slides">
                             <li>
-                              <img alt="" src="https://s3.amazonaws.com/cdn.bizcounthub.com/products/product_01.jpg" />
+                              <img alt="" src="https://cdn.bizcounthub.com/products/product_01.jpg" />
                             </li>
                             <li>
                               <img alt="" src="https://cdn.bizcounthub.com/products/product_02.jpg" />
