@@ -284,7 +284,7 @@ class HomeView extends Component {
                   <div className="item panel prl-15 ptb-20">
                     <div className="row row-rl-5 row-xs-cell">
                       <div className="col-xs-4 valign-middle">
-                        <img className="pr-10" src="assets/images/icons/tablet.png" alt=""></img>
+                        <img className="pr-10" src="https://cdn.bizcounthub.com/icons/tablet.png" alt=""></img>
                       </div>
                       <div className="col-xs-8">
                         <h5 className="mb-10 pt-5">Deals & Coupons</h5>
@@ -297,7 +297,7 @@ class HomeView extends Component {
                   <div className="item panel prl-15 ptb-20">
                     <div className="row row-rl-5 row-xs-cell">
                       <div className="col-xs-4 valign-middle">
-                        <img className="pr-10" src="assets/images/icons/online-shop-6.png" alt=""></img>
+                        <img className="pr-10" src="https://cdn.bizcounthub.com/icons/online-shop-6.png" alt=""></img>
                       </div>
                       <div className="col-xs-8">
                         <h5 className="mb-10 pt-5">Find Best Offers</h5>
@@ -310,7 +310,7 @@ class HomeView extends Component {
                   <div className="item panel prl-15 ptb-20">
                     <div className="row row-rl-5 row-xs-cell">
                       <div className="col-xs-4 valign-middle">
-                        <img className="pr-10" src="assets/images/icons/money.png" alt=""></img>
+                        <img className="pr-10" src="https://cdn.bizcounthub.com/icons/money.png" alt=""></img>
                       </div>
                       <div className="col-xs-8">
                         <h5 className="mb-10 pt-5">Save Money</h5>
