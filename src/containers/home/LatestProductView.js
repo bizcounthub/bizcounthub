@@ -2,16 +2,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag'
+
+import { countDownHandler } from '../../components/func';
 import CountDown from '../../components/countdown/CountDown';
 
 class LatestProductView extends Component {
 
   componentWillMount() {
-
-  }
-
-  componentDidMount() {
-
   }
 
   render() {
@@ -29,8 +26,9 @@ class LatestProductView extends Component {
     }`;
 
     const products = (
-      <Query query={FETCH_DIS_PRODUCT}>
+      < Query query={FETCH_DIS_PRODUCT} >
         {({ loading, error, data }) => {
+          console.log("fetching product....");
           if (loading) {
             console.log("fetching...")
             return <div>Fetching</div>
@@ -115,7 +113,8 @@ class LatestProductView extends Component {
               }
             </React.Fragment>
           )
-        }}
+        }
+        }
       </Query>
     )
     return (

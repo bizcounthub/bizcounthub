@@ -14,18 +14,18 @@ import LatestProductView from './LatestProductView';
 
 class HomeView extends Component {
   componentWillMount() {
-    console.log("willMount");
+    //console.log("willMount");
   }
 
   shouldComponentUpdate() {
-    console.log("shouldComponentUpdate");
+    //console.log("shouldComponentUpdate");
   }
   componentDidUpdate() {
     // axios.get("https://jsonplaceholder.typicode.com/posts/1")
     //   .then(response => {
     //     //console.log(response);
     //   })
-    console.log("didUpdate");
+    //console.log("didUpdate");
   }
 
   componentDidMount() {
@@ -40,8 +40,8 @@ class HomeView extends Component {
     //     this.setState({ posts: updatePosts });
     //     //console.log(response);
     //   });
-    console.log("didMount");
-    const owlSlider = document.getElementsByClassName('owl-slider');
+    //console.log("didMount");
+    //const owlSlider = document.getElementsByClassName('owl-slider');
     // for (var item of owlSlider) {
 
     // }
