@@ -10,8 +10,21 @@ import CountDown from '../../components/countdown/CountDown';
  */
 class LatestProductView extends Component {
 
+  state = {
+
+  }
+
   componentWillMount() {
 
+  }
+
+  componentDidMount() {
+
+  }
+  productDetailHandler = () => {
+    //this.props.history.replace("/deal/10000001");
+    alert('clicked');
+    //  this.context.router.push('/deal/10000001');
   }
 
   render() {
@@ -44,39 +57,38 @@ class LatestProductView extends Component {
             <React.Fragment>
               {
                 data.product_discount_v.map(x =>
-                  <div key={x.id} className="col-sm-6 col-lg-4">
-                    <Link to={{ pathname: "/deal/" + x.id }}>
-                      <div className="deal-single panel card">
-                        <figure className="deal-thumbnail embed-responsive embed-responsive-16by9">
-                          <img alt="" src={x.img}></img>
-                          <div className="label-discount left-20 top-15">{x.discount_percentage}</div>
-                          <div className="time-left bottom-15 right-20 font-md-14">
-                            <span>
-                              <i className="ico fa fa-clock-o mr-10"></i>
-                              <CountDown date={x.to_date}></CountDown>
-                            </span>
-                          </div>
-                          <div className="deal-store-logo">
-                            <img src="assets/images/brands/brand_01.jpg" alt=""></img>
-                          </div>
-                        </figure>
-                        <div className="bg-white pt-20 pl-20 pr-15">
-                          <div className="pr-md-10">
-                            <h3 className="deal-title mb-10">
-                              <Link to={{ pathname: "/deal" + x.id }}>{x.product_name}</Link>
-                            </h3>
-                            <ul className="deal-meta list-inline mb-10 color-mid">
-                              <li><i className="ico fa fa-map-marker mr-10"></i>United State</li>
-                              <li><i className="ico fa fa-shopping-basket mr-10"></i>120 Bought</li>
-                            </ul>
-                            <p className="text-muted mb-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam numquam nostrum.</p>
-                          </div>
-                          <div className="deal-price pos-r mb-15">
-                            <h3 className="price ptb-5 text-right"><span className="price-sale">$300.00</span>$150.00</h3>
-                          </div>
+                  <div key={x.id} className="col-sm-6 col-lg-4" onClick={this.productDetailHandler}>
+
+                    <div className="deal-single panel card">
+                      <figure className="deal-thumbnail embed-responsive embed-responsive-16by9">
+                        <img alt="" src={x.img}></img>
+                        <div className="label-discount left-20 top-15">{x.discount_percentage}</div>
+                        <div className="time-left bottom-15 right-20 font-md-14">
+                          <span>
+                            <i className="ico fa fa-clock-o mr-10"></i>
+                            <CountDown date={x.to_date}></CountDown>
+                          </span>
+                        </div>
+                        <div className="deal-store-logo">
+                          <img src="assets/images/brands/brand_01.jpg" alt=""></img>
+                        </div>
+                      </figure>
+                      <div className="bg-white pt-20 pl-20 pr-15">
+                        <div className="pr-md-10">
+                          <h3 className="deal-title mb-10">
+                            <Link to={{ pathname: "/deal" + x.id }}>{x.product_name}</Link>
+                          </h3>
+                          <ul className="deal-meta list-inline mb-10 color-mid">
+                            <li><i className="ico fa fa-map-marker mr-10"></i>United State</li>
+                            <li><i className="ico fa fa-shopping-basket mr-10"></i>120 Bought</li>
+                          </ul>
+                          <p className="text-muted mb-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam numquam nostrum.</p>
+                        </div>
+                        <div className="deal-price pos-r mb-15">
+                          <h3 className="price ptb-5 text-right"><span className="price-sale">$300.00</span>$150.00</h3>
                         </div>
                       </div>
-                    </Link>
+                    </div>
                   </div>
                 )
               }

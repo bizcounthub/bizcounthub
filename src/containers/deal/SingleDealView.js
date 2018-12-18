@@ -6,6 +6,7 @@ class SingleDealView extends Component {
 
   componentDidMount() {
     this.productSliderHandler();
+    console.log(this.props);
   }
 
   productSliderHandler() {
@@ -28,6 +29,7 @@ class SingleDealView extends Component {
   }
 
   render() {
+    console.log(this.props.match.params.id);
     return (
       <React.Fragment>
         <div className="page-container ptb-60">

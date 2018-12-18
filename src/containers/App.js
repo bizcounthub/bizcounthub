@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter } from 'react-router-dom';
+import { Router, browserHistory } from 'react-router';
 
 import Layout from '../components/layout/Layout';
 import HomeView from './home/HomeView';
@@ -19,7 +20,7 @@ class App extends Component {
 					<Route path="/signup" component={SignupView} />
 					<Route path="/store" component={StoreView} />
 					<Route path="/signin" component={SigninView} />
-					<Route path="/deal" component={SingleDealView} />
+					<Route path="/deal/:id" component={SingleDealView} />
 				</Layout>
 			</BrowserRouter >
 		);
