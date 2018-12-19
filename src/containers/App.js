@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter } from 'react-router-dom';
-import { Router, browserHistory } from 'react-router';
+import { connect } from 'react-redux';
+import ScrollMemory from 'react-router-scroll-memory';
 
 import Layout from '../components/layout/Layout';
 import HomeView from './home/HomeView';
@@ -10,11 +11,28 @@ import SigninView from './authenticate/SigninView';
 import StoreView from './store/StoreView';
 import SingleDealView from './deal/SingleDealView';
 
+const mapStateToProps = state => {
+	return {
+		// 	appLoaded: state.common.appLoaded,
+		// 	appName: state.common.appName,
+		// 	currentUser: state.common.currentUser,
+		// 	redirectTo: state.common.redirectTo
+	}
+};
+
+const mapDispatchToProps = dispatch => ({
+	// onLoad: (payload, token) =>
+	// 	dispatch({ type: APP_LOAD, payload, token, skipTracking: true }),
+	// onRedirect: () =>
+	// 	dispatch({ type: REDIRECT })
+});
+
 class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
 				<Layout>
+					<ScrollMemory />
 					<Route path="/" exact component={HomeView} />
 					<Route path="/about" component={AboutView} />
 					<Route path="/signup" component={SignupView} />
@@ -22,9 +40,9 @@ class App extends Component {
 					<Route path="/signin" component={SigninView} />
 					<Route path="/deal/:id" component={SingleDealView} />
 				</Layout>
-			</BrowserRouter >
+			</BrowserRouter>
 		);
 	}
 }
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);

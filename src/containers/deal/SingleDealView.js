@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
+
+import '../../components/magiczoomplus/magiczoomplus.css';
 
 class SingleDealView extends Component {
   componentWillMount() {
@@ -6,9 +9,15 @@ class SingleDealView extends Component {
 
   componentDidMount() {
     this.productSliderHandler();
-    console.log(this.props);
+    this.magicZoomHandler();
   }
 
+  magicZoomHandler() {
+    // window.MagicZoom.start('Zoom-1');
+    var magicZoom = window.MagicZoom;
+    //magicZoom.$.start('Zoom-1');
+    // window.MagicZoom.start();
+  }
   productSliderHandler() {
     window.$('#product_slider_nav').flexslider({
       animation: "slide",
@@ -43,7 +52,7 @@ class SingleDealView extends Component {
                         <div id="product_slider" className="flexslider">
                           <ul className="slides">
                             <li>
-                              <img alt="" src="https://cdn.bizcounthub.com/products/product_01.jpg" />
+                              <Link id="Zoom-1" to={{ pathname: "https://cdn.bizcounthub.com/products/product_01.jpg" }} className="MagicZoom" ><img alt="" src="https://cdn.bizcounthub.com/products/product_01.jpg" /></Link>
                             </li>
                             <li>
                               <img alt="" src="https://cdn.bizcounthub.com/products/product_02.jpg" />

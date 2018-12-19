@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag'
 import { Link } from 'react-router-dom';
@@ -12,6 +13,16 @@ import LatestNewsView from './LatestNewsView';
 import LatestCuponView from './LatestCuponView';
 import LatestProductView from './LatestProductView';
 
+
+const mapStateToProps = state => {
+  return {
+
+  }
+}
+
+const mapDispatchToProps = dispatch => ({
+
+})
 class HomeView extends Component {
   componentWillMount() {
     //console.log("willMount");
@@ -321,7 +332,7 @@ class HomeView extends Component {
                 </div>
               </div>
             </div>
-            <LatestProductView />
+            <LatestProductView props={this.props} />
             <LatestDealView />
             <LatestCuponView />
             <PopularStoreView />
@@ -333,4 +344,4 @@ class HomeView extends Component {
   }
 }
 
-export default HomeView;
+export default connect(mapStateToProps, mapDispatchToProps)(HomeView);

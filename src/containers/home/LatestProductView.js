@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Query } from 'react-apollo';
+import { Router } from 'react-router';
 import gql from 'graphql-tag'
 
 import CountDown from '../../components/countdown/CountDown';
+import { fromPromise } from 'apollo-link';
 
-/**
- * Product View for latest listing
- */
+const mapStateToProps = state => {
+  return {
+
+  }
+}
+
+const mapDispatchToProps = dispatch => ({
+
+})
+
 class LatestProductView extends Component {
 
   state = {
@@ -21,10 +31,9 @@ class LatestProductView extends Component {
   componentDidMount() {
 
   }
-  productDetailHandler = () => {
-    //this.props.history.replace("/deal/10000001");
-    alert('clicked');
-    //  this.context.router.push('/deal/10000001');
+
+  productDetailHandler = (url) => {
+    this.props.props.history.push(url);
   }
 
   render() {
@@ -57,7 +66,7 @@ class LatestProductView extends Component {
             <React.Fragment>
               {
                 data.product_discount_v.map(x =>
-                  <div key={x.id} className="col-sm-6 col-lg-4" onClick={this.productDetailHandler}>
+                  <div key={x.id} className="col-sm-6 col-lg-4" onClick={() => this.productDetailHandler("/deal/" + x.id)}>
 
                     <div className="deal-single panel card">
                       <figure className="deal-thumbnail embed-responsive embed-responsive-16by9">
@@ -114,4 +123,4 @@ class LatestProductView extends Component {
   }
 }
 
-export default LatestProductView;
+export default connect(mapStateToProps, mapDispatchToProps)(LatestProductView);
