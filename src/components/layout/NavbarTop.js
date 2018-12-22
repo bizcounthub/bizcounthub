@@ -17,11 +17,13 @@ const navbarTop = (props) => (
           <div className="col-sm-12 col-md-8">
             <ul className="nav-top nav-top-right list-inline t-xs-center t-md-right">
               <li>
-                <a href=".html"><i className="fa fa-flag-en"></i>English <i className="fa fa-caret-down"></i></a>
+                <Link to={{ pathname: "/" }}><i className="fa fa-flag-en"></i>English <i className="fa fa-caret-down"></i></Link>
                 <ul>
-                  <li><a href="index-2.html"><i className="fa fa-flag-en"></i>English</a>
+                  <li>
+                    <Link to={{ pathname: "/" }}><i className="fa fa-flag-en"></i>English</Link>
                   </li>
-                  <li><a href="ar/index.html"><i className="fa fa-flag-ar"></i>العربية</a>
+                  <li>
+                    <Link to={{ pathname: "/" }}><i className="fa fa-flag-ar"></i>Khmer</Link>
                   </li>
                 </ul>
               </li>

@@ -16,7 +16,7 @@ class SingleDealView extends Component {
     // window.MagicZoom.start('Zoom-1');
     var magicZoom = window.MagicZoom;
     //magicZoom.$.start('Zoom-1');
-    // window.MagicZoom.start();
+
   }
   productSliderHandler() {
     window.$('#product_slider_nav').flexslider({
