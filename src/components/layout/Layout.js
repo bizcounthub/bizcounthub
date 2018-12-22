@@ -15,8 +15,8 @@ class Layout extends Component {
             <div className="container">
               <div className="row row-rl-0 row-tb-20 row-md-cell">
                 <div className="brand col-md-3 t-xs-center t-md-left valign-middle">
-                  <Link to="/" className="logo">
-                    <img src="assets/images/logo.png" alt="" width="250" />
+                  <Link to={{ pathname: "/" }} onClick={() => { window.location.reload() }} className="logo">
+                    <img src="https://cdn.bizcounthub.com/logo.png" alt="" width="250" />
                   </Link>
                 </div>
                 <div className="header-search col-md-9">
