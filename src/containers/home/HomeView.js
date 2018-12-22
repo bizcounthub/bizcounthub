@@ -80,7 +80,7 @@ class HomeView extends Component {
         {({ loading, error, data }) => {
           if (loading) {
             console.log("fetching...")
-            return <div>Fetching</div>
+            return <div>Loading...</div>
           }
           if (error) {
             console.log(error)
