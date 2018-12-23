@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class AboutView extends Component {
+class About extends Component {
   render() {
     console.log(this.props.history);
     return (
@@ -9,4 +9,4 @@ class AboutView extends Component {
   }
 }
 
-export default AboutView;
+export default About;

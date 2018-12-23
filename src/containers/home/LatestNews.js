@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class LatestNewsView extends Component {
+class LatestNews extends Component {
   render() {
     return (
       <React.Fragment>
@@ -43,9 +43,6 @@ class LatestNewsView extends Component {
                 </div>
               </article>
             </div>
-
-
-
             <div className="blog-post col-xs-12 col-sm-6 col-md-4">
               <article className="entry panel">
                 <figure className="entry-media embed-responsive embed-responsive-16by9">
@@ -139,4 +136,4 @@ class LatestNewsView extends Component {
   }
 }
 
-export default LatestNewsView;
+export default LatestNews;

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import '../../components/magiczoomplus/magiczoomplus.css';
 
-class SingleDealView extends Component {
+class SingleDeal extends Component {
   componentWillMount() {
   }
 
@@ -750,4 +750,4 @@ class SingleDealView extends Component {
   }
 }
 
-export default SingleDealView;
+export default SingleDeal;

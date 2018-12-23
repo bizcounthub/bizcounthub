@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class RegisterView extends Component {
+class Signup extends Component {
 	render() {
 		return (
 			<React.Fragment>
@@ -64,4 +64,4 @@ class RegisterView extends Component {
 	}
 }
 
-export default RegisterView;
+export default Signup;

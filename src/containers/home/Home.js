@@ -7,11 +7,11 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-import LatestDealView from './LatestDealView';
-import PopularStoreView from './PopularStoreView';
-import LatestNewsView from './LatestNewsView';
-import LatestCuponView from './LatestCuponView';
-import LatestProductView from './LatestProductView';
+import LatestDeal from './LatestDeal';
+import PopularStore from './PopularStore';
+import LatestNews from './LatestNews';
+import LatestCupon from './LatestCupon';
+import LatestProduct from './LatestProduct';
 
 
 const mapStateToProps = state => {
@@ -23,7 +23,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
 
 })
-class HomeView extends Component {
+class Home extends Component {
   componentWillMount() {
     //console.log("willMount");
   }
@@ -332,11 +332,11 @@ class HomeView extends Component {
                 </div>
               </div>
             </div>
-            <LatestProductView props={this.props} />
-            <LatestDealView />
-            <LatestCuponView />
-            <PopularStoreView />
-            <LatestNewsView />
+            <LatestProduct props={this.props} />
+            <LatestDeal />
+            <LatestCupon />
+            <PopularStore />
+            <LatestNews />
           </div>
         </div>
       </React.Fragment >
@@ -344,4 +344,4 @@ class HomeView extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeView);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

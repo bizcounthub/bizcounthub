@@ -18,18 +18,18 @@ const mapDispatchToProps = dispatch => ({
 
 })
 
-class LatestProductView extends Component {
+class LatestProduct extends Component {
 
   state = {
 
   }
 
   componentWillMount() {
-
+    console.log('willMount Product');
   }
 
   componentDidMount() {
-
+    console.log("didMount");
   }
 
   productDetailHandler = (url) => {
@@ -46,7 +46,9 @@ class LatestProductView extends Component {
         to_date,
         discount_percentage,
         img,
-        id
+        id,
+        store_img_logo,
+        store_name
       }
     }`;
 
@@ -70,7 +72,7 @@ class LatestProductView extends Component {
 
                     <div className="deal-single panel card">
                       <figure className="deal-thumbnail embed-responsive embed-responsive-16by9">
-                        <img alt="" src={x.img}></img>
+                        <img alt={x.product_name} src={x.img}></img>
                         <div className="label-discount left-20 top-15">{x.discount_percentage}</div>
                         <div className="time-left bottom-15 right-20 font-md-14">
                           <span>
@@ -79,7 +81,7 @@ class LatestProductView extends Component {
                           </span>
                         </div>
                         <div className="deal-store-logo">
-                          <img src="assets/images/brands/brand_01.jpg" alt=""></img>
+                          <img src={x.store_img_logo} alt={x.store_name}></img>
                         </div>
                       </figure>
                       <div className="bg-white pt-20 pl-20 pr-15">
@@ -123,4 +125,4 @@ class LatestProductView extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(LatestProductView);
+export default connect(mapStateToProps, mapDispatchToProps)(LatestProduct);

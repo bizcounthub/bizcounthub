@@ -8,9 +8,11 @@ const navbarTop = (props) => (
         <div className="row">
           <div className="col-sm-12 col-md-4 is-hidden-sm-down">
             <ul className="nav-top nav-top-left list-inline t-left">
-              <li><a href="terms_conditions.html"><i className="fa fa-question-circle"></i>Discounts Guide</a>
+              <li>
+                <Link to={{ pathname: "/term_condition" }}><i className="fa fa-question-circle"></i>Discounts Guide</Link>
               </li>
-              <li><a href="faq.html"><i className="fa fa-support"></i>Customer Assistance</a>
+              <li>
+                <Link to={{ pathname: "/faq" }}><i className="fa fa-support"></i>Customer Assistance</Link>
               </li>
             </ul>
           </div>

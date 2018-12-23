@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import OwlCarousel from 'react-owl-carousel';
 
-class LatestCuponView extends Component {
+class LatestCupon extends Component {
 
   render() {
     return (
@@ -235,4 +235,4 @@ class LatestCuponView extends Component {
   }
 }
 
-export default LatestCuponView;
+export default LatestCupon;
