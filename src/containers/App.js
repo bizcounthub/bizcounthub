@@ -34,9 +34,9 @@ class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<Switch>
-					<Layout>
-						<ScrollMemory />
+				<Layout>
+					<ScrollMemory />
+					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route path="/about" component={About} />
 						<Route path="/signup" component={Signup} />
@@ -46,8 +46,8 @@ class App extends Component {
 						<Route path="/term_condition" component={TermCondition} />
 						<Route path="/faq" component={CustomerAssistance} />
 						<Route component={NotFound} />
-					</Layout>
-				</Switch>
+					</Switch>
+				</Layout>
 			</BrowserRouter >
 		);
 	}
