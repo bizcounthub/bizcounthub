@@ -103,7 +103,7 @@ class HomeView extends Component {
                     </ul>
                   </aside>
                 </div>
-                <div className="col-xs-12 col-md-8 col-lg-9">
+                {/* <div className="col-xs-12 col-md-8 col-lg-9">
                   <div className="header-deals-slider">
                     <OwlCarousel
                       loop
@@ -271,7 +271,7 @@ class HomeView extends Component {
                       </div>
                     </OwlCarousel>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="section explain-process-area ptb-30">

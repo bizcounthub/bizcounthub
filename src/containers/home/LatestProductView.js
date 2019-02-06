@@ -82,16 +82,17 @@ class LatestProductView extends Component {
                           <img src="assets/images/brands/brand_01.jpg" alt=""></img>
                         </div>
                       </figure>
-                      <div className="bg-white pt-20 pl-20 pr-15">
+                      <div className="bg-white pt-10 pl-10 pr-10">
                         <div className="pr-md-10">
-                          <h3 className="deal-title mb-10">
+                          <h3 className="deal-title">
                             <Link to={{ pathname: "/deal" }}>{x.product_name}</Link>
+                            <span className="text-right">$300.00</span>
                           </h3>
-                          <ul className="deal-meta list-inline mb-10 color-mid">
-                            <li><i className="ico fa fa-map-marker mr-10"></i>United State</li>
-                            <li><i className="ico fa fa-shopping-basket mr-10"></i>120 Bought</li>
+                          <ul className="deal-meta list-inline color-mid">
+                            <li><i className="ico fa fa-map-marker mr-5"></i>United State</li>
+                            <li><i className="ico fa fa-shopping-basket mr-5"></i>120 Bought</li>
                           </ul>
-                          <p className="text-muted mb-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam numquam nostrum.</p>
+                          {/* <p className="text-muted mb-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam numquam nostrum.</p> */}
                         </div>
                         {/* <div className="rating mb-10">
                           <span className="rating-stars rate-allow" data-rating="5">
@@ -105,8 +106,8 @@ class LatestProductView extends Component {
                             ( <span className="rating-count">241</span> rates )
                             </span>
                         </div> */}
-                        <div className="deal-price pos-r mb-15">
-                          <h3 className="price ptb-5 text-right"><span className="price-sale">$300.00</span>$150.00</h3>
+                        <div className="deal-price pos-l">
+                          <h3 className="price ptb-5 text-left"><span className="price-sale">$300.00</span>$150.00</h3>
                         </div>
                       </div>
                     </div>

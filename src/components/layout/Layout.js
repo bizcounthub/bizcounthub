@@ -9,7 +9,7 @@ const layout = (props) => (
   <React.Fragment>
     <header id="mainHeader" className="main-header">
       <NavbarTop />
-      <div className="header-header bg-white">
+      {/* <div className="header-header bg-white">
         <div className="container">
           <div className="row row-rl-0 row-tb-20 row-md-cell">
             <div className="brand col-md-3 t-xs-center t-md-left valign-middle">
@@ -61,7 +61,7 @@ const layout = (props) => (
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <Menu />
     </header>
     <main id="mainContent" className="main-content">

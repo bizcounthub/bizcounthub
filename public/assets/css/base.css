@@ -2737,7 +2737,7 @@ label {
   background-color: #2ed87b !important;
 }
 .bg-blue {
-  background-color: #314555 !important;
+  background-color: #19b5fe !important;
 }
 .bg-white {
   background-color: #fff !important;
@@ -3704,16 +3704,16 @@ fieldset[disabled] .btn {
 }
 /* |–––––––––––––[ Default Button ]––––––––––––| */
 .btn {
-  background-color: #2ed87b;
+  background-color: #19b5fe ;
   color: #fff;
 }
 .btn.btn-link,
 .btn.btn-o {
-  color: #2ed87b;
+  color: #19b5fe ;
   background-color: transparent;
 }
 .btn.btn-o {
-  border-color: #2ed87b;
+  border-color: #19b5fe ;
 }
 .btn:hover,
 .btn.hover,
@@ -3722,8 +3722,8 @@ fieldset[disabled] .btn {
 .btn:active,
 .btn.active {
   color: #fff;
-  background-color: #25c76f;
-  border-color: #25c76f;
+  background-color: #19b5fe ;
+  border-color: #19b5fe ;
 }
 .btn.btn-link:hover,
 .btn.btn-link.hover,
