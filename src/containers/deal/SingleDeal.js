@@ -1,11 +1,44 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
-class SingleDealView extends Component {
+import '../../components/magiczoomplus/magiczoomplus.css';
+
+class SingleDeal extends Component {
   componentWillMount() {
+  }
 
+  componentDidMount() {
+    this.productSliderHandler();
+    this.magicZoomHandler();
+  }
+
+  magicZoomHandler() {
+    // window.MagicZoom.start('Zoom-1');
+    var magicZoom = window.MagicZoom;
+    //magicZoom.$.start('Zoom-1');
+
+  }
+  productSliderHandler() {
+    window.$('#product_slider_nav').flexslider({
+      animation: "slide",
+      controlNav: false,
+      animationLoop: false,
+      slideshow: false,
+      itemWidth: 150,
+      asNavFor: '#product_slider'
+    });
+
+    window.$('#product_slider').flexslider({
+      animation: "slide",
+      controlNav: false,
+      animationLoop: false,
+      slideshow: false,
+      sync: "#product_slider_nav"
+    });
   }
 
   render() {
+    console.log(this.props.match.params.id);
     return (
       <React.Fragment>
         <div className="page-container ptb-60">
@@ -19,7 +52,7 @@ class SingleDealView extends Component {
                         <div id="product_slider" className="flexslider">
                           <ul className="slides">
                             <li>
-                              <img alt="" src="https://cdn.bizcounthub.com/products/product_01.jpg" />
+                              <Link id="Zoom-1" to={{ pathname: "https://cdn.bizcounthub.com/products/product_01.jpg" }} className="MagicZoom" ><img alt="" src="https://cdn.bizcounthub.com/products/product_01.jpg" /></Link>
                             </li>
                             <li>
                               <img alt="" src="https://cdn.bizcounthub.com/products/product_02.jpg" />
@@ -717,4 +750,4 @@ class SingleDealView extends Component {
   }
 }
 
-export default SingleDealView;
+export default SingleDeal;

@@ -307,25 +307,25 @@
     /*-------------------------------------
      Flexslider
     -------------------------------------*/
-    var product_slider = function () {
-        //alert('jol slider pro');
-        $('#product_slider_nav').flexslider({
-            animation: "slide",
-            controlNav: false,
-            animationLoop: false,
-            slideshow: false,
-            itemWidth: 150,
-            asNavFor: '#product_slider'
-        });
-        // alert('jol product slider');
-        $('#product_slider').flexslider({
-            animation: "slide",
-            controlNav: false,
-            animationLoop: false,
-            slideshow: false,
-            sync: "#product_slider_nav"
-        });
-    };
+    // var product_slider = function () {
+    //     //alert('jol slider pro');
+    //     $('#product_slider_nav').flexslider({
+    //         animation: "slide",
+    //         controlNav: false,
+    //         animationLoop: false,
+    //         slideshow: false,
+    //         itemWidth: 150,
+    //         asNavFor: '#product_slider'
+    //     });
+    //     // alert('jol product slider');
+    //     $('#product_slider').flexslider({
+    //         animation: "slide",
+    //         controlNav: false,
+    //         animationLoop: false,
+    //         slideshow: false,
+    //         sync: "#product_slider_nav"
+    //     });
+    // };
 
     /*-------------------------------------
      Stars Rating functions
@@ -369,25 +369,25 @@
     /*-------------------------------------
      Deals Countdown function
     -------------------------------------*/
-    var countdown = function () {
-        var countdown_select = $("[data-countdown]");
-        countdown_select.each(function () {
-            $(this).countdown($(this).data('countdown'))
-                .on('update.countdown', function (e) {
-                    var format = '%H : %M : %S';
-                    if (e.offset.totalDays > 0) {
-                        format = '%d Day%!d ' + format;
-                    }
-                    if (e.offset.weeks > 0) {
-                        format = '%w Week%!w ' + format;
-                    }
-                    //console.log(format);
-                    $(this).html(e.strftime(format));
-                });
-        }).on('finish.countdown', function (e) {
-            $(this).html('This offer ha expired!').addClass('disabled');
-        });
-    };
+    // var countdown = function () {
+    //     var countdown_select = $("[data-countdown]");
+    //     countdown_select.each(function () {
+    //         $(this).countdown($(this).data('countdown'))
+    //             .on('update.countdown', function (e) {
+    //                 var format = '%H : %M : %S';
+    //                 if (e.offset.totalDays > 0) {
+    //                     format = '%d Day%!d ' + format;
+    //                 }
+    //                 if (e.offset.weeks > 0) {
+    //                     format = '%w Week%!w ' + format;
+    //                 }
+    //                 //console.log(format);
+    //                 $(this).html(e.strftime(format));
+    //             });
+    //     }).on('finish.countdown', function (e) {
+    //         $(this).html('This offer has expired!').addClass('disabled');
+    //     });
+    // };
 
     /*-------------------------------------
      Delete Item From Cart
@@ -434,10 +434,10 @@
         add_favorite();
         //owl_carousel();
         toogle_class();
-        countdown();
+        //countdown();
         data_rating();
         do_rating();
-        countdown();
+        //countdown();
         cart_delete_item();
     });
 
@@ -448,7 +448,7 @@
     $(window).on('load', function () {
         preloader();
         navbar_resize_load();
-        product_slider();
+        //product_slider();
     });
 
     /* ================================

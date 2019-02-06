@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag'
 
-class StoreView extends Component {
+class Store extends Component {
   render() {
     const FETCH_STORES = gql`
     query fetch_stores {
@@ -240,4 +240,4 @@ class StoreView extends Component {
   }
 }
 
-export default StoreView;
+export default Store;

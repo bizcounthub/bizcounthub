@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag'
 import { Link } from 'react-router-dom';
@@ -6,26 +7,36 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-import LatestDealView from './LatestDealView';
-import PopularStoreView from './PopularStoreView';
-import LatestNewsView from './LatestNewsView';
-import LatestCuponView from './LatestCuponView';
-import LatestProductView from './LatestProductView';
+import LatestDeal from './LatestDeal';
+import PopularStore from './PopularStore';
+import LatestNews from './LatestNews';
+import LatestCupon from './LatestCupon';
+import LatestProduct from './LatestProduct';
 
-class HomeView extends Component {
+
+const mapStateToProps = state => {
+  return {
+
+  }
+}
+
+const mapDispatchToProps = dispatch => ({
+
+})
+class Home extends Component {
   componentWillMount() {
-    console.log("willMount");
+    //console.log("willMount");
   }
 
   shouldComponentUpdate() {
-    console.log("shouldComponentUpdate");
+    //console.log("shouldComponentUpdate");
   }
   componentDidUpdate() {
     // axios.get("https://jsonplaceholder.typicode.com/posts/1")
     //   .then(response => {
     //     //console.log(response);
     //   })
-    console.log("didUpdate");
+    //console.log("didUpdate");
   }
 
   componentDidMount() {
@@ -40,14 +51,18 @@ class HomeView extends Component {
     //     this.setState({ posts: updatePosts });
     //     //console.log(response);
     //   });
-    console.log("didMount");
-    const owlSlider = document.getElementsByClassName('owl-slider');
-    for (var item of owlSlider) {
+    //console.log("didMount");
+    //const owlSlider = document.getElementsByClassName('owl-slider');
+    // for (var item of owlSlider) {
 
-    }
+    // }
 
     const countDown = null;
     //console.log(owlSlider[0].dataset.autoplay);
+  }
+
+  productSliderHandler() {
+
   }
 
   render() {
@@ -65,7 +80,7 @@ class HomeView extends Component {
         {({ loading, error, data }) => {
           if (loading) {
             console.log("fetching...")
-            return <div>Fetching</div>
+            return <div>Loading...</div>
           }
           if (error) {
             console.log(error)
@@ -280,7 +295,7 @@ class HomeView extends Component {
                   <div className="item panel prl-15 ptb-20">
                     <div className="row row-rl-5 row-xs-cell">
                       <div className="col-xs-4 valign-middle">
-                        <img className="pr-10" src="assets/images/icons/tablet.png" alt=""></img>
+                        <img className="pr-10" src="https://cdn.bizcounthub.com/icons/tablet.png" alt=""></img>
                       </div>
                       <div className="col-xs-8">
                         <h5 className="mb-10 pt-5">Deals & Coupons</h5>
@@ -293,7 +308,7 @@ class HomeView extends Component {
                   <div className="item panel prl-15 ptb-20">
                     <div className="row row-rl-5 row-xs-cell">
                       <div className="col-xs-4 valign-middle">
-                        <img className="pr-10" src="assets/images/icons/online-shop-6.png" alt=""></img>
+                        <img className="pr-10" src="https://cdn.bizcounthub.com/icons/online-shop-6.png" alt=""></img>
                       </div>
                       <div className="col-xs-8">
                         <h5 className="mb-10 pt-5">Find Best Offers</h5>
@@ -306,7 +321,7 @@ class HomeView extends Component {
                   <div className="item panel prl-15 ptb-20">
                     <div className="row row-rl-5 row-xs-cell">
                       <div className="col-xs-4 valign-middle">
-                        <img className="pr-10" src="assets/images/icons/money.png" alt=""></img>
+                        <img className="pr-10" src="https://cdn.bizcounthub.com/icons/money.png" alt=""></img>
                       </div>
                       <div className="col-xs-8">
                         <h5 className="mb-10 pt-5">Save Money</h5>
@@ -317,11 +332,11 @@ class HomeView extends Component {
                 </div>
               </div>
             </div>
-            <LatestProductView />
-            <LatestDealView />
-            <LatestCuponView />
-            <PopularStoreView />
-            <LatestNewsView />
+            <LatestProduct props={this.props} />
+            <LatestDeal />
+            <LatestCupon />
+            <PopularStore />
+            <LatestNews />
           </div>
         </div>
       </React.Fragment >
@@ -329,4 +344,4 @@ class HomeView extends Component {
   }
 }
 
-export default HomeView;
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

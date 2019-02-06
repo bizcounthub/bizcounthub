@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
+import createHistory from 'history/createBrowserHistory';
+import { connectRouter } from 'connected-react-router';
 
 import reducer from './reducer';
-
-const store = createStore(reducer);
-
-export default store;
+export const history = createHistory();
+export const store = createStore(connectRouter(history)(reducer));

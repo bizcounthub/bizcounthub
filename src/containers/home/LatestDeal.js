@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import CountDown from '../../components/countdown/CountDown';
 
-class LatestDealView extends Component {
+class LatestDeal extends Component {
   render() {
     return (
       <React.Fragment>
@@ -404,4 +404,4 @@ class LatestDealView extends Component {
   }
 }
 
-export default LatestDealView;
+export default LatestDeal;

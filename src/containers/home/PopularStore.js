@@ -4,7 +4,7 @@ import gql from 'graphql-tag'
 import { Link } from 'react-router-dom';
 import OwlCarousel from 'react-owl-carousel';
 
-class PopularStoreView extends Component {
+class PopularStore extends Component {
 
   componentWillMount() {
 
@@ -103,4 +103,4 @@ class PopularStoreView extends Component {
   }
 }
 
-export default PopularStoreView;
+export default PopularStore;

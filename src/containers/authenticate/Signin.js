@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class SigninView extends Component {
+class Signin extends Component {
   render() {
     return (
       <React.Fragment>
@@ -59,4 +59,4 @@ class SigninView extends Component {
   }
 }
 
-export default SigninView;
+export default Signin;

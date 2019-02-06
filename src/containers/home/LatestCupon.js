@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import OwlCarousel from 'react-owl-carousel';
 
-class LatestCuponView extends Component {
+class LatestCupon extends Component {
 
   render() {
     return (
@@ -54,7 +54,7 @@ class LatestCuponView extends Component {
                   <div className="row">
                     <div className="col-xs-12">
                       <div className="text-center p-20">
-                        <img className="store-logo" src="assets/images/coupons/coupon_01.jpg" alt=""></img>
+                        <img className="store-logo" src="https://cdn.bizcounthub.com/coupons/coupon_01.jpg" alt=""></img>
                       </div>
                     </div>
                     <div className="col-xs-12">
@@ -83,7 +83,7 @@ class LatestCuponView extends Component {
                   <div className="row">
                     <div className="col-xs-12">
                       <div className="text-center p-20">
-                        <img className="store-logo" src="assets/images/coupons/coupon_02.jpg" alt=""></img>
+                        <img className="store-logo" src="https://cdn.bizcounthub.com/coupons/coupon_02.jpg" alt=""></img>
                       </div>
                     </div>
 
@@ -113,7 +113,7 @@ class LatestCuponView extends Component {
                   <div className="row">
                     <div className="col-xs-12">
                       <div className="text-center p-20">
-                        <img className="store-logo" src="assets/images/coupons/coupon_03.jpg" alt=""></img>
+                        <img className="store-logo" src="https://cdn.bizcounthub.com/coupons/coupon_03.jpg" alt=""></img>
                       </div>
                     </div>
 
@@ -143,7 +143,7 @@ class LatestCuponView extends Component {
                   <div className="row">
                     <div className="col-xs-12">
                       <div className="text-center p-20">
-                        <img className="store-logo" src="assets/images/coupons/coupon_04.jpg" alt=""></img>
+                        <img className="store-logo" src="https://cdn.bizcounthub.com/coupons/coupon_04.jpg" alt=""></img>
                       </div>
                     </div>
                     <div className="col-xs-12">
@@ -175,7 +175,7 @@ class LatestCuponView extends Component {
                   <div className="row">
                     <div className="col-xs-12">
                       <div className="text-center p-20">
-                        <img className="store-logo" src="assets/images/coupons/coupon_05.jpg" alt=""></img>
+                        <img className="store-logo" src="https://cdn.bizcounthub.com/coupons/coupon_05.jpg" alt=""></img>
                       </div>
                     </div>
                     <div className="col-xs-12">
@@ -204,7 +204,7 @@ class LatestCuponView extends Component {
                   <div className="row">
                     <div className="col-xs-12">
                       <div className="text-center p-20">
-                        <img className="store-logo" src="assets/images/coupons/coupon_06.jpg" alt=""></img>
+                        <img className="store-logo" src="https://cdn.bizcounthub.com/coupons/coupon_06.jpg" alt=""></img>
                       </div>
                     </div>
                     <div className="col-xs-12">
@@ -235,4 +235,4 @@ class LatestCuponView extends Component {
   }
 }
 
-export default LatestCuponView;
+export default LatestCupon;

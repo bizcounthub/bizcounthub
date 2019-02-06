@@ -1,6 +1,7 @@
 import React from 'react';
 import Countdown from 'react-countdown-now';
 import Moment from 'react-moment';
+import 'moment/locale/km';
 
 const countDown = (props) => {
   // Renderer callback with condition
@@ -9,11 +10,8 @@ const countDown = (props) => {
       // Render a completed state
       return <span className="t-uppercase" data-countdown={props.date}>THIS OFFER HAS EXPIRED</span>;
     } else {
-      // Render a countdown
-      console.log("total:", total);
-
       return (
-        <span className="t-uppercase" data-countdown={props.date}><Moment date={props.date}></Moment> {hours}:{minutes}:{seconds}</span>
+        <span className="t-uppercase" data-countdown={props.date}><Moment locale="en" date={props.date} fromNow ago></Moment> {hours}:{minutes}:{seconds}</span>
       )
     }
   };

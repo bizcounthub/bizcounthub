@@ -8,20 +8,24 @@ const navbarTop = (props) => (
         <div className="row">
           <div className="col-sm-12 col-md-4 is-hidden-sm-down">
             <ul className="nav-top nav-top-left list-inline t-left">
-              <li><a href="terms_conditions.html"><i className="fa fa-question-circle"></i>Discounts Guide</a>
+              <li>
+                <Link to={{ pathname: "/term_condition" }}><i className="fa fa-question-circle"></i>Discounts Guide</Link>
               </li>
-              <li><a href="faq.html"><i className="fa fa-support"></i>Customer Assistance</a>
+              <li>
+                <Link to={{ pathname: "/faq" }}><i className="fa fa-support"></i>Customer Assistance</Link>
               </li>
             </ul>
           </div>
           <div className="col-sm-12 col-md-8">
             <ul className="nav-top nav-top-right list-inline t-xs-center t-md-right">
               <li>
-                <a href=".html"><i className="fa fa-flag-en"></i>English <i className="fa fa-caret-down"></i></a>
+                <Link to={{ pathname: "/" }}><i className="fa fa-flag-en"></i>English <i className="fa fa-caret-down"></i></Link>
                 <ul>
-                  <li><a href="index-2.html"><i className="fa fa-flag-en"></i>English</a>
+                  <li>
+                    <Link to={{ pathname: "/" }}><i className="fa fa-flag-en"></i>English</Link>
                   </li>
-                  <li><a href="ar/index.html"><i className="fa fa-flag-ar"></i>العربية</a>
+                  <li>
+                    <Link to={{ pathname: "/" }}><i className="fa fa-flag-ar"></i>Khmer</Link>
                   </li>
                 </ul>
               </li>
