@@ -68,7 +68,7 @@ class LatestProduct extends Component {
             <React.Fragment>
               {
                 data.product_discount_v.map(x =>
-                  <div key={x.id} className="col-sm-6 col-lg-4" onClick={() => this.productDetailHandler("/deal/" + x.id)}>
+                  <div key={x.id} className="col-sm-6 col-md-3 col-lg-3" onClick={() => this.productDetailHandler("/deal/" + x.id)}>
 
                     <div className="deal-single panel card">
                       <figure className="deal-thumbnail embed-responsive embed-responsive-16by9">

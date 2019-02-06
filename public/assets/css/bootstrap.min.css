@@ -1581,6 +1581,11 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
+.container-full {
+  margin: 0 auto;
+  width: 98%;
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
