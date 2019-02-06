@@ -86,14 +86,9 @@ class LatestProduct extends Component {
                       </figure>
                       <div className="bg-white pt-10 pl-10 pr-10">
                         <div className="pr-md-10">
-<<<<<<< HEAD:src/containers/home/LatestProductView.js
                           <h3 className="deal-title">
                             <Link to={{ pathname: "/deal" }}>{x.product_name}</Link>
                             <span className="text-right">$300.00</span>
-=======
-                          <h3 className="deal-title mb-10">
-                            <Link to={{ pathname: "/deal" + x.id }}>{x.product_name}</Link>
->>>>>>> 3c0d0c5738db10f6d1c949bc3f2ebe67d8e41c3c:src/containers/home/LatestProduct.js
                           </h3>
                           <ul className="deal-meta list-inline color-mid">
                             <li><i className="ico fa fa-map-marker mr-5"></i>United State</li>
@@ -101,7 +96,6 @@ class LatestProduct extends Component {
                           </ul>
                           {/* <p className="text-muted mb-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam numquam nostrum.</p> */}
                         </div>
-<<<<<<< HEAD:src/containers/home/LatestProductView.js
                         {/* <div className="rating mb-10">
                           <span className="rating-stars rate-allow" data-rating="5">
                             <i className="fa fa-star-o"></i>
@@ -116,10 +110,6 @@ class LatestProduct extends Component {
                         </div> */}
                         <div className="deal-price pos-l">
                           <h3 className="price ptb-5 text-left"><span className="price-sale">$300.00</span>$150.00</h3>
-=======
-                        <div className="deal-price pos-r mb-15">
-                          <h3 className="price ptb-5 text-right"><span className="price-sale">$300.00</span>$150.00</h3>
->>>>>>> 3c0d0c5738db10f6d1c949bc3f2ebe67d8e41c3c:src/containers/home/LatestProduct.js
                         </div>
                       </div>
                     </div>
