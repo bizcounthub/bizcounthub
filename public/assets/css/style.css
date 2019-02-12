@@ -948,7 +948,7 @@
 /* ––––––––––––>>> Coupons Header  <<<–––––––––– */
 /* ––––––––––––––––––––––––––––––––––––––––––––– */
 .nav-coupon-category li a {
-  display: block;
+  /*display: block;*/
   position: relative;
   text-transform: uppercase;
   line-height: 43px;

@@ -108,10 +108,10 @@ class Home extends Component {
     return (
       <React.Fragment>
         <div className="page-container ptb-10">
-          <div className="container">
-            <div className="section deals-header-area ptb-30">
+          <div className="container-full">
+            <div className="section deals-header-area">
               <div className="row row-tb-20">
-                <div className="col-xs-12 col-md-4 col-lg-3">
+                <div className="col-xs-12">
                   <aside>
                     <ul className="nav-coupon-category panel">
                       {categories}

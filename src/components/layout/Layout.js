@@ -5,7 +5,6 @@ import Menu from '../layout/Menu';
 import NavbarTop from '../layout/NavbarTop';
 import Footer from '../layout/Footer';
 
-<<<<<<< HEAD
 const layout = (props) => (
   <React.Fragment>
     <header id="mainHeader" className="main-header">
@@ -25,26 +24,6 @@ const layout = (props) => (
                     <div className="input-group">
                       <input type="text" className="form-control input-lg search-input" placeholder="Enter Keywork Here ..." required="required"></input>
                       <div className="input-group-btn">
-=======
-class Layout extends Component {
-  render() {
-    return (
-      <React.Fragment >
-        <header id="mainHeader" className="main-header">
-          <NavbarTop />
-          <div className="header-header bg-white">
-            <div className="container">
-              <div className="row row-rl-0 row-tb-20 row-md-cell">
-                <div className="brand col-md-3 t-xs-center t-md-left valign-middle">
-                  <Link to={{ pathname: "/" }} onClick={() => { window.location.reload() }} className="logo">
-                    <img src="https://cdn.bizcounthub.com/logo.png" alt="" width="250" />
-                  </Link>
-                </div>
-                <div className="header-search col-md-9">
-                  <div className="row row-tb-10 ">
-                    <div className="col-sm-8">
-                      <form className="search-form">
->>>>>>> 3c0d0c5738db10f6d1c949bc3f2ebe67d8e41c3c
                         <div className="input-group">
                           <input type="text" className="form-control input-lg search-input" placeholder="Enter Keywork Here ..." required="required"></input>
                           <div className="input-group-btn">
@@ -86,7 +65,6 @@ class Layout extends Component {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </div> */}
       <Menu />
@@ -97,19 +75,6 @@ class Layout extends Component {
     <Footer />
   </React.Fragment>
 );
-=======
-          <Menu />
-        </header>
-        <main id="mainContent" className="main-content">
-          {this.props.children}
-        </main>
-        <Footer />
-      </React.Fragment >
-    )
-  }
 
-}
->>>>>>> 3c0d0c5738db10f6d1c949bc3f2ebe67d8e41c3c
-
-export default Layout;
+export default layout;
 
