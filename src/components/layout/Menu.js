@@ -1,8 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import NavbarTop from '../layout/NavbarTop';
+
 const menu = (props) => (
   <React.Fragment>
+    <NavbarTop />
     <div className="header-menu bg-blue">
       <div className="container">
         <nav className="nav-bar">
@@ -239,7 +242,6 @@ const menu = (props) => (
                 <NavLink exact to={{ pathname: "/about", hash: "#submit", search: "?quick-submit=true" }}>About</NavLink>
               </li>
             </ul>
-
           </div>
         </nav>
       </div>

@@ -28,9 +28,9 @@ class Home extends Component {
     //console.log("willMount");
   }
 
-  shouldComponentUpdate() {
-    //console.log("shouldComponentUpdate");
-  }
+  // shouldComponentUpdate() {
+  //   //console.log("shouldComponentUpdate");
+  // }
   componentDidUpdate() {
     // axios.get("https://jsonplaceholder.typicode.com/posts/1")
     //   .then(response => {
@@ -108,7 +108,7 @@ class Home extends Component {
     return (
       <React.Fragment>
         <div className="page-container ptb-10">
-          <div className="container-full">
+          <div className="container">
             <div className="section deals-header-area">
               <div className="row row-tb-20">
                 <div className="col-xs-12">

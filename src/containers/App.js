@@ -13,6 +13,7 @@ import SingleDeal from './deal/SingleDeal';
 import TermCondition from './company/TermCondition';
 import CustomerAssistance from './company/CustomerAssistance';
 import NotFound from './error/404';
+import Channel from '../components/layout/Channel';
 
 const mapStateToProps = state => {
 	return {
@@ -45,6 +46,7 @@ class App extends Component {
 						<Route path="/deal/:id" component={SingleDeal} />
 						<Route path="/term_condition" component={TermCondition} />
 						<Route path="/faq" component={CustomerAssistance} />
+						<Route path="/blankpage" component={Channel} />
 						<Route component={NotFound} />
 					</Switch>
 				</Layout>

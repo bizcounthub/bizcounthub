@@ -2,14 +2,25 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import Menu from '../layout/Menu';
-import NavbarTop from '../layout/NavbarTop';
 import Footer from '../layout/Footer';
+import { relative } from 'path';
 
-const layout = (props) => (
-  <React.Fragment>
-    <header id="mainHeader" className="main-header">
-      <NavbarTop />
-      {/* <div className="header-header bg-white">
+
+class Layout extends Component {
+
+  componentWillMount() {
+    console.log("layout will mount");
+  }
+
+  handleOnMouseOver() {
+    console.log("over!");
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <header id="mainHeader" className="main-header">
+          {/* <div className="header-header bg-white">
         <div className="container">
           <div className="row row-rl-0 row-tb-20 row-md-cell">
             <div className="brand col-md-3 t-xs-center t-md-left valign-middle">
@@ -67,14 +78,39 @@ const layout = (props) => (
           </div>
         </div>
       </div> */}
-      <Menu />
-    </header>
-    <main id="mainContent" className="main-content">
-      {props.children}
-    </main>
-    <Footer />
-  </React.Fragment>
-);
+          <Menu />
+          <nav id="ls-channel-nav" className="ls-channel-nav">
+            <div id="ls-primary-nav-row" className="page-container ls-primary-nav-loaded">
+              <ul id="primary-nav" className="primary-nav">
+                <li id="home-tab" className="primary-nav-tab">
+                  <Link to={{ pathname: "/" }}>Featured</Link>
+                </li>
+                <li id="home-tab" className="primary-nav-tab">
+                  <Link
+                    onMouseOver={this.handleOnMouseOver} to={{ pathname: "/" }}
+                    onMouseEnter={this.handleClick}>Things To Do
+                  </Link>
+                </li>
+                <li id="home-tab" className="primary-nav-tab">
+                  <Link to={{ pathname: "/" }}>Beauty & Spas</Link>
+                </li>
+              </ul>
+            </div>
+            <nav id="subnav" className="subnav notranslate">
+              <div id="ls-rail" className="ls-rail">
+                <span id="ls-rail-slide"></span>
+              </div>
+            </nav>
+          </nav>
+        </header>
+        <main id="mainContent" className="main-content">
+          {this.props.children}
+        </main>
+        <Footer />
+      </React.Fragment>
+    );
+  }
+}
 
-export default layout;
+export default Layout;
 
