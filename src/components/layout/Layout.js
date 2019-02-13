@@ -8,6 +8,7 @@ import { relative } from 'path';
 
 class Layout extends Component {
 
+
   componentWillMount() {
     console.log("layout will mount");
   }
@@ -80,7 +81,7 @@ class Layout extends Component {
       </div> */}
           <Menu />
           <nav id="ls-channel-nav" className="ls-channel-nav">
-            <div id="ls-primary-nav-row" className="page-container ls-primary-nav-loaded">
+            <div id="ls-primary-nav-row" className="container page-container ls-primary-nav-loaded">
               <ul id="primary-nav" className="primary-nav">
                 <li id="home-tab" className="primary-nav-tab">
                   <Link to={{ pathname: "/" }}>Featured</Link>
@@ -98,7 +99,7 @@ class Layout extends Component {
             </div>
             <nav id="subnav" className="subnav notranslate">
               <div id="ls-rail" className="ls-rail">
-                <span id="ls-rail-slide"></span>
+                <span id="ls-rail-slide" style={{ left: "411.5px", width: "78.5625px" }}></span>
               </div>
             </nav>
           </nav>

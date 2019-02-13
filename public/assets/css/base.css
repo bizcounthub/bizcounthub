@@ -4325,7 +4325,7 @@ fieldset[disabled] .btn {
 /*
 new
 */
-.ls-channel-nav,
+.ls-channel-nav, 
 .ls-channel-nav .row {
   position: relative
 }
@@ -4342,6 +4342,13 @@ new
   list-style: none;
   font-weight: 300
 }
+.primary-nav {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 
 .primary-nav a {
   line-height: 45px;
@@ -4381,28 +4388,6 @@ new
   text-align: right
 }
 
-.primary-nav-tab a:hover {
-  /* position: absolute;
-  content: "";
-  pointer-events: none;
-  background: #23ba67; */
-  /* margin: 0;
-  
-  bottom: 0;
-  -webkit-transform: none;
-  transform: none;
-  height: 3px;
-  border: 0;
-  top: -2px; 
-  transition: left .1s ease-in-out, width .1s ease-in-out; */
-}
-
-.primary-nav {
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between
-}
 
 #ls-rail {
   position: relative;
@@ -4413,7 +4398,7 @@ new
   content: "";
   position: absolute;
   pointer-events: none;
-  background: var(--color-prim-400);
+  background: #0398db;
   margin: 0;
   left: 50%;
   bottom: 0;
