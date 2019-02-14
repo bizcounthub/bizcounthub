@@ -8,16 +8,44 @@ import { relative } from 'path';
 
 class Layout extends Component {
 
+  state = {
+    xx: 0,
+    widthwidth: 0
+  };
 
   componentWillMount() {
     console.log("layout will mount");
   }
+  handleOnMouseLeave = (e) => {
+    this.setState({ xx: 0, widthwidth: 0 });
+  }
+  handleOnMouseOver = (e) => {
+    const tabs = Array.from(
+      document.querySelectorAll('.primary-nav .primary-nav-tab a')
+    );
 
-  handleOnMouseOver() {
-    console.log("over!");
+    const rects = tabs.map(tab => {
+      const { x, y, left, top, width, height } = tab.getBoundingClientRect();
+      const id = tab.dataset.id;
+      return { id, x: x || left, y: y || top, width, height };
+    });
+
+    const { x, width } = rects.find(x => x.id === e.target.dataset.id);
+    this.setState({ xx: x, widthwidth: width });
   }
 
   render() {
+    let onSelected = null;
+
+    if (this.state.xx === 0) {
+      onSelected = null;
+    } else {
+      onSelected = (
+        < div id="ls-rail" className="ls-rail" >
+          <span id="ls-rail-slide" style={{ left: `${this.state.xx - 10}px`, width: `${this.state.widthwidth + 20}px` }}></span>
+        </div >
+      )
+    }
     return (
       <React.Fragment>
         <header id="mainHeader" className="main-header">
@@ -83,24 +111,30 @@ class Layout extends Component {
           <nav id="ls-channel-nav" className="ls-channel-nav">
             <div id="ls-primary-nav-row" className="container page-container ls-primary-nav-loaded">
               <ul id="primary-nav" className="primary-nav">
-                <li id="home-tab" className="primary-nav-tab">
-                  <Link to={{ pathname: "/" }}>Featured</Link>
-                </li>
-                <li id="home-tab" className="primary-nav-tab">
+                <li id="home-tab1" className="primary-nav-tab">
                   <Link
-                    onMouseOver={this.handleOnMouseOver} to={{ pathname: "/" }}
-                    onMouseEnter={this.handleClick}>Things To Do
+                    onMouseOver={this.handleOnMouseOver}
+                    onMouseLeave={this.handleOnMouseLeave}
+                    to={{ pathname: "/" }} data-id="featured">Featured</Link>
+                </li>
+                <li id="home-tab2" className="primary-nav-tab">
+                  <Link
+                    to={{ pathname: "/" }}
+                    onMouseOver={this.handleOnMouseOver}
+                    onMouseLeave={this.handleOnMouseLeave}
+                    data-id="thing-to-do">Things To Do
                   </Link>
                 </li>
-                <li id="home-tab" className="primary-nav-tab">
-                  <Link to={{ pathname: "/" }}>Beauty & Spas</Link>
+                <li id="home-tab3" className="primary-nav-tab">
+                  <Link
+                    onMouseOver={this.handleOnMouseOver}
+                    onMouseLeave={this.handleOnMouseLeave}
+                    to={{ pathname: "/" }} data-id="beauty-spa">Beauty & Spas</Link>
                 </li>
               </ul>
             </div>
             <nav id="subnav" className="subnav notranslate">
-              <div id="ls-rail" className="ls-rail">
-                <span id="ls-rail-slide" style={{ left: "411.5px", width: "78.5625px" }}></span>
-              </div>
+              {onSelected}
             </nav>
           </nav>
         </header>
