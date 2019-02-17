@@ -40,6 +40,7 @@ class LatestProduct extends Component {
     const FETCH_DIS_PRODUCT = gql`
     query fetch_dis_product {
       product_discount_v (limit: 9) {
+        access_name,
         product_name,
         discount_price,
         from_date,
@@ -68,7 +69,7 @@ class LatestProduct extends Component {
             <React.Fragment>
               {
                 data.product_discount_v.map(x =>
-                  <div key={x.id} className="col-sm-6 col-md-3 col-lg-3" onClick={() => this.productDetailHandler("/deal/" + x.id)}>
+                  <div key={x.id} className="col-sm-6 col-md-3 col-lg-3" onClick={() => this.productDetailHandler("/deal/" + x.access_name)}>
 
                     <div className="deal-single panel card">
                       <figure className="deal-thumbnail embed-responsive embed-responsive-16by9">
