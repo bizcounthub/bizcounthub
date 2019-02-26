@@ -47,6 +47,7 @@ export default class DealSuggestions extends Component {
 
   renderBody(highlightIndex) {
     const { keyword, suggestions } = this.props;
+    console.log('renderBody:', suggestions);
     const matchIndex = this.findMatchIndex();
 
     return (
@@ -78,6 +79,7 @@ export default class DealSuggestions extends Component {
       closeSearch,
     } = this.props;
 
+    console.log('suggestions', suggestions);
     return (
       <DealSuggestionsContainer
         keyword={keyword}

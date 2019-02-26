@@ -43,6 +43,6 @@ export const suggestionsSelector = createSelector(
     recentLocations,
     errorStatus,
     search,
-    showLocationFlyout: !getCll(),
+    //showLocationFlyout: !getCll(),
   })
 );

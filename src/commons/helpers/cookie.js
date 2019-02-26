@@ -62,7 +62,7 @@ export function saveSearchLoc(searchLoc) {
   searchLoc.lat = fixLatOrLng(searchLoc.lat);
   searchLoc.lng = fixLatOrLng(searchLoc.lng);
   const searchLocString = encodeURIComponent(JSON.stringify(searchLoc));
-  Cookies.set(SEARCH_LOC, searchLocString, {
+  window.Cookie.set(SEARCH_LOC, searchLocString, {
     consentClass: 'essential',
     maxAge: DECADE,
   });

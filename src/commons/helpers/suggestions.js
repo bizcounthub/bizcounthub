@@ -2,6 +2,7 @@ import { createSelector } from 'reselect';
 
 export const suggestStarted = (state, action) => {
   const { keyword } = action;
+  console.log('suggestStarted', action);
   if (!keyword) {
     return state;
   }
@@ -18,6 +19,7 @@ export const suggestStarted = (state, action) => {
 
 export const suggestFailed = (state, action) => {
   const { keyword, error } = action;
+  console.log('failed:', error);
   if (!keyword) {
     return state;
   }
@@ -34,6 +36,7 @@ export const suggestFailed = (state, action) => {
 
 export const suggestSuccess = (state, action) => {
   const { keyword, suggestions } = action;
+  console.log('suggestSuccess', suggestions);
   if (!keyword || !Array.isArray(suggestions)) {
     return state;
   }

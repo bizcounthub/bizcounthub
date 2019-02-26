@@ -8,7 +8,7 @@ export function fetch(endpoint, fetchOption = {}) {
   const fullUrl = endpoint;
   const isTouch = document.body.classList.contains('is-mobile');
   let latLng;
-  const { lat, lng } = window.Groupon.division || {};
+  const { lat, lng } = {};
 
   if (lat && lng) {
     latLng = `${lat},${lng}`;
@@ -38,12 +38,12 @@ export function fetch(endpoint, fetchOption = {}) {
         throw new Error(res.statusText);
       }
       if (option.format === 'json') {
-        return res.json();
+        console.log('res', res.clone().json());
+        return res.clone().json();
       }
       return res.text();
     })
     .then(response => {
-      console(response);
       if (typeof response === 'string') {
         return response;
       }
@@ -51,7 +51,7 @@ export function fetch(endpoint, fetchOption = {}) {
       if (response.data || response.err) {
         const { data, err } = response;
         if (err) {
-          console.log(response);
+          console.log('string', response);
           return Promise.reject(err);
         }
         return data;
@@ -67,6 +67,7 @@ export function fetch(endpoint, fetchOption = {}) {
  * @param {Object=} option - option
  */
 export function get(endpoint, params = {}, option = {}) {
+  alert('jol');
   const c = endpoint.indexOf('?') > -1 ? '&' : '?';
   const url = `${endpoint}${c}${paramsToQueryString(params)}`;
   return fetch(url, option);

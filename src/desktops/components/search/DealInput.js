@@ -126,8 +126,7 @@ export default class DealInput extends Component {
           className=" ax-hidden"
           htmlFor="ls-search"
         >
-          {/* {t.searchbar.dealPlaceholder} */}
-          Search Groupon
+          {t.searchbar.dealPlaceholder}
         </label>
         <input {...this.defaultAttributes} {...inputAttributes} />
         <DealSearchResult enableSearchIcon={enableSearchIcon} />
