@@ -34,11 +34,11 @@ export function fetch(endpoint, fetchOption = {}) {
   return window
     .fetch(fullUrl, option)
     .then(res => {
+      console.log('request: ', fullUrl);
       if (!res.ok) {
         throw new Error(res.statusText);
       }
       if (option.format === 'json') {
-        console.log('res', res.clone().json());
         return res.clone().json();
       }
       return res.text();

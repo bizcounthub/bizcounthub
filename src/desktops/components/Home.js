@@ -99,7 +99,7 @@ class Home extends Component {
         }}
       </Query>
     )
-
+    return null;
     return (
       <React.Fragment>
         <div className="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">

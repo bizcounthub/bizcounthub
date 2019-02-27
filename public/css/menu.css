@@ -1,6 +1,6 @@
 @font-face {
   font-family: Groupon;
-  src: url(Groupon-6e46b5ff5a.woff2) format("woff2"), url(Groupon-4290206604.woff) format("woff");
+  src: url(https://www2.grouponcdn.com/layout/assets/Groupon-6e46b5ff5a.woff2) format("woff2"), url(https://www2.grouponcdn.com/layout/assets/Groupon-4290206604.woff) format("woff");
   font-weight: 400;
   font-style: normal
 }
@@ -763,7 +763,7 @@ object {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(OpenSansRegular-4511fb0ce0.woff2) format("woff2"), url(OpenSansRegular-3cc42e08b5.woff) format("woff")
+  src: url(https://www2.grouponcdn.com/layout/assets/OpenSansRegular-4511fb0ce0.woff2) format("woff2"), url(https://www2.grouponcdn.com/layout/assets/OpenSansRegular-3cc42e08b5.woff) format("woff")
 }
 
 @font-face {
@@ -771,7 +771,7 @@ object {
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(OpenSansSemiBold-ae379b1027.woff2) format("woff2"), url(OpenSansSemiBold-0e28cba242.woff) format("woff")
+  src: url(https://www2.grouponcdn.com/layout/assets/OpenSansSemiBold-ae379b1027.woff2) format("woff2"), url(https://www2.grouponcdn.com/layout/assets/OpenSansSemiBold-0e28cba242.woff) format("woff")
 }
 
 @font-face {
@@ -779,7 +779,7 @@ object {
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(OpenSansLight-2fd0ffaf77.woff2) format("woff2"), url(OpenSansLight-0caeeeddc1.woff) format("woff")
+  src: url(https://www2.grouponcdn.com/layout/assets/OpenSansLight-2fd0ffaf77.woff2) format("woff2"), url(https://www2.grouponcdn.com/layout/assets/OpenSansLight-0caeeeddc1.woff) format("woff")
 }
 
 html {
